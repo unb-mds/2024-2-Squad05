@@ -5,9 +5,11 @@
 ![]((https://img.shields.io/github/issues/unb-mds/2024-2-Squad05))
 ![](https://img.shields.io/github/issues-closed/unb-mds/2024-2-Squad05.svg)
 
-## [TEMA] - Squad 05
+## Análise de Sentimento e Tendências Governamentais - Squad 05
 
-Projeto da disciplina Métodos de Desenvolvimento de Software.
+
+## 🔎 Sobre o Projeto: 
+O projeto Análise de Sentimento e Tendências Governamentais foi criado para responder à crescente demanda por uma compreensão mais profunda das percepções populares sobre políticas e ações governamentais. Nossa missão é fornecer um panorama acessível e transparente das tendências de opinião pública, facilitando o acesso a informações confiáveis para cidadãos, pesquisadores e formuladores de políticas. Acreditamos que, ao oferecer uma análise clara dos sentimentos da sociedade, contribuímos para uma gestão pública mais inclusiva, responsável e conectada com as reais necessidades da população.
 
 ## 💻 Tecnologias 
 
