@@ -2,9 +2,7 @@ name: Docs Deploy
 on:
   push:
     branches:
-      - main
-    paths:
-      - 'docs/**'
+      - docs-deploy-03
 permissions:
   contents: write
 jobs:
