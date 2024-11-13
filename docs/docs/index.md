@@ -1,4 +1,4 @@
-# Análise de Sentimento e Tendências Governamentais - Squad 05
+# Análise de Sentimento e Tendências Governamentais - Squad05
 
 ## Sobre    
 
