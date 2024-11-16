@@ -1,4 +1,54 @@
-site_name: Squad05
+site_name: Squad 05 - 2024/2
+
+# Configurações de navegação
+nav:
+  - Home: index.md
+  - Como executar o projeto: getting-started.md
+  - Arquitetura:
+      - Visão Geral: architecture/architecture.md
+  - Documentação:
+      - Visão Geral: documentation/documentation.md
+      - Sprints: documentation/sprints.md
+      - Quadros: documentation/boards.md
+      - Reuniões: documentation/meetings.md
+  - Material de Estudo: study-material/content.md
+  - Ferramentas externas:
+      - Brasil Participativo: external-tools/brasil-participativo.md
+  - Sobre:
+      - FAQs: usage/faqs.md
+      - Licença: usage/license.md
+      - Tutoriais: usage/tutorials.md
 
 theme:
+  # Trata-se de um tema personalizado, que foi desenvolvido a partir do tema Material
   name: material
+
+  # Configurações de features - elementos que podem ser adicionados a documentação
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.full
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+  # Configurações de idioma
+  language: pt
+
+  # Configurações de cores e fontes
+  palette:
+    primary: green
+    accent: light green
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+# Configurações de texto no rodapé
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/unb-mds/2024-2-Squad05
