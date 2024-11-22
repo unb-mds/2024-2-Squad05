@@ -3,21 +3,27 @@ site_name: Squad 05 - 2024/2
 # Configurações de navegação
 nav:
   - Home: index.md
-  - Como executar o projeto: getting-started.md
-  - Arquitetura:
-      - Visão Geral: architecture/architecture.md
-  - Documentação:
-      - Visão Geral: documentation/documentation.md
+
+  - Configuração e Contribuição:
+      - Configuração: configuracaoecontribuicao/configuracao.md
+      - Contribuição: configuracaoecontribuicao/contribuicao.md
+
+  - Arquitetura:  architecture/architecture.md
+
+  - Jornada do Produto:
+      - Documentação Visual: documentation/miro.md
+      - Requisitos: documentation/requisitos.md
+      - Product Backlog: documentation/productbacklog.md
       - Sprints: documentation/sprints.md
-      - Quadros: documentation/boards.md
-      - Reuniões: documentation/meetings.md
-  - Material de Estudo: study-material/content.md
-  - Ferramentas externas:
-      - Brasil Participativo: external-tools/brasil-participativo.md
-  - Sobre:
-      - FAQs: usage/faqs.md
-      - Licença: usage/license.md
-      - Tutoriais: usage/tutorials.md
+      - Releases Notes: documentation/releasesnotes.md
+  
+  - Protótipo: prototipo/prototipo.md
+  
+  - Registros
+    - Organização da equipe: registros/organizacaoequipe.md
+    - Reuniões: registros/meetings.md
+    - Estudos: registros/organizacaoequipe.md
+
 
 theme:
   # Trata-se de um tema personalizado, que foi desenvolvido a partir do tema Material
