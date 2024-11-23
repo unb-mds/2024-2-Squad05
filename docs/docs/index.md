@@ -2,7 +2,11 @@
 
 ## Sobre o Projeto
 
-O projeto XXXXX - Análise de Sentimento e Tópicos Recorrentes do Brasil Participativo foi desenvolvido para responder à necessidade de uma visão aprofundada sobre as opiniões e percepções populares expressas no Brasil Participativo. A partir de comentários e discussões na plataforma, o nosso projeto visa identificar as principais emoções e temas discutidos pela população, oferecendo uma visão panorâmica e detalhada das tendências de opinião pública. Acreditamos que, ao oferecer uma análise clara dos sentimentos da sociedade e as principais tendências sociais, contribuímos para uma gestão pública mais inclusiva, responsável e conectada com as reais necessidades da população.
+Bem-vindo ao repositório do Squad 5 de Métodos e Desenvolvimento de Software – Análise de Sentimento e Tópicos Recorrentes do Brasil Participativo!
+
+Aqui você encontrará toda a documentação, código e informações relevantes sobre o desenvolvimento deste projeto. O projeto foi concebido para atender à necessidade de uma visão aprofundada sobre as opiniões e percepções populares expressas na plataforma Brasil Participativo. A partir de comentários e discussões na plataforma, buscamos identificar as principais emoções e temas discutidos pela população, oferecendo uma visão panorâmica e detalhada das tendências de opinião pública.
+
+Acreditamos que, ao oferecer uma análise clara dos sentimentos da sociedade e das principais tendências sociais, contribuímos para uma gestão pública mais inclusiva, responsável e conectada com as reais necessidades da população. Explore as seções abaixo para se aprofundar nos detalhes técnicos e contribuir com a nossa comunidade.
 
 ## Desenvolvedores
 
