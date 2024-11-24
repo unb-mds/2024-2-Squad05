@@ -8,7 +8,7 @@ nav:
       - Configuração: configuracaoecontribuicao/configuracao.md
       - Contribuição: configuracaoecontribuicao/contribuicao.md
 
-  - Arquitetura:  architecture/architecture.md
+  - Arquitetura: architecture/architecture.md
 
   - Jornada do Produto:
       - Documentação Visual: documentation/miro.md
@@ -16,14 +16,13 @@ nav:
       - Product Backlog: documentation/productbacklog.md
       - Sprints: documentation/sprints.md
       - Releases Notes: documentation/releasesnotes.md
-  
-  - Protótipo: prototipo/prototipo.md
-  
-  - Registros:
-    - Organização da equipe: registros/organizacaoequipe.md
-    - Reuniões: registros/meetings.md
-    - Estudos: registros/organizacaoequipe.md
 
+  - Protótipo: prototipo/prototipo.md
+
+  - Registros:
+      - Organização da equipe: registros/organizacaoequipe.md
+      - Reuniões: registros/meetings.md
+      - Estudos: registros/estudos.md
 
 theme:
   # Trata-se de um tema personalizado, que foi desenvolvido a partir do tema Material
