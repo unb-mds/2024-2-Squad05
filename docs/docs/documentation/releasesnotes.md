@@ -4,6 +4,8 @@
 
 ---
 
+Tabela de Versionamento
+
 | Versão | Data       | Descrição                                                     | Autor(es)        |
 |--------|------------|---------------------------------------------------------------|------------------|
 | 1.0    | 28/11/2024 | Criação inicial                       | Gabriel Pinto |

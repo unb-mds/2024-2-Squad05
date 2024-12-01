@@ -52,7 +52,7 @@ A <strong>Tabela de Backlog</strong> apresentada a seguir lista os épicos e his
 
 ---
 
-## Tabela de Versionamento
+Tabela de Versionamento
 
 | Versão | Data       | Descrição                                                     | Autor(es)        |
 |--------|------------|---------------------------------------------------------------|------------------|
