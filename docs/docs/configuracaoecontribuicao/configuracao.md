@@ -4,7 +4,7 @@ Nesta seção, você encontrará todas as instruções necessárias para configu
 
 ---
 
-## Tabela de Versionamento
+Tabela de Versionamento
 
 | Versão | Data       | Descrição                                                     | Autor(es)        |
 |--------|------------|---------------------------------------------------------------|------------------|

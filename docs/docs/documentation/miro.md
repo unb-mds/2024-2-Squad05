@@ -6,7 +6,7 @@ Utilizamos o Miro para criar e organizar visualmente nossas ideias e processos, 
 
 ---
 
-## Tabela de Versionamento
+Tabela de Versionamento
 
 | Versão | Data       | Descrição       | Autor(es)     |
 | ------ | ---------- | --------------- | ------------- |

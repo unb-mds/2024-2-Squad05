@@ -1,12 +1,8 @@
-Este documento descreve os requisitos do sistema são divididos em **funcionais** e **não funcionais**, conforme descrito abaixo.
-
-### Requisitos Funcionais
-Os requisitos funcionais descrevem as funcionalidades específicas que o sistema deve oferecer para atender às necessidades do usuário ou ao propósito do software.
-
-### Requisitos Não Funcionais
-Os requisitos não funcionais descrevem características de qualidade do sistema, como desempenho, usabilidade, segurança, e outras restrições relacionadas ao ambiente ou à arquitetura.
+<div align="justify"> Este documento descreve os requisitos do sistema são divididos em <strong> funcionais </strong> e <strong>não funcionais</strong>, conforme descrito abaixo.</div>
 
 ## Requisitos Funcionais
+
+<div align="justify"> Os requisitos funcionais descrevem as funcionalidades específicas que o sistema deve oferecer para atender às necessidades do usuário ou ao propósito do software.</div>
 
 | Número | Requisito                                                                                             |
 |--------|-------------------------------------------------------------------------------------------------------|
@@ -19,6 +15,7 @@ Os requisitos não funcionais descrevem características de qualidade do sistema
 
 ## Requisitos Não Funcionais
 
+<div align="justify"> Os requisitos não funcionais descrevem características de qualidade do sistema, como desempenho, usabilidade, segurança, e outras restrições relacionadas ao ambiente ou à arquitetura.</div>
 
 | Número | Requisito                                                                                             |
 |--------|-------------------------------------------------------------------------------------------------------|
