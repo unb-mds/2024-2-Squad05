@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Participatory Processes</title>
+  </head>
+  <body>
+    <h1>Participatory Processes</h1>
+
+    {% if data.error %}
+    <p>Error: {{ data.error }}</p>
+    {% else %}
+    <h2>Participatory Processes</h2>
+    <ul>
+      {% for process in data.data.participatoryProcesses %}
+      <li>
+        <strong>{{ process.title.translations.0.text }}</strong> (ID: {{
+        process.id }})
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h2>Decidim Version</h2>
+    <p>{{ data.data.decidim.version }}</p>
+    {% endif %}
+  </body>
+</html>

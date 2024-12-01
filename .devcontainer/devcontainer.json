@@ -1,0 +1,35 @@
+{
+  "name": "Lumina - Sentiment and Topics Analysis",
+  "dockerFile": "Dockerfile",
+  "context": "..",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-vscode.vscode-icons",
+        "redhat.vscode-yaml",
+      ],
+      "settings": {
+        "python.pythonPath": "/usr/local/bin/python",
+        "python.autoComplete.extraPaths": [
+          "/workspace/.venv/lib/python3.12/site-packages"
+        ],
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": true,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true,
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash"
+          }
+        }
+      }
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt",
+  "forwardPorts": [8000],
+  "workspaceFolder": "/workspace/lumina",
+  "remoteUser": "vscode"
+}
