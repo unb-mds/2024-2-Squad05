@@ -6,3 +6,4 @@ typing_extensions>=4.12.2
 colorama>=0.4.6
 certifi>=2024.8.30
 idna>=3.10
+pydantic>=2.10.3
