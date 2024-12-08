@@ -5,8 +5,7 @@ nav:
   - Home: index.md
 
   - Configuração e Contribuição:
-      - Configuração: configuracaoecontribuicao/configuracao.md
-      - Contribuição: configuracaoecontribuicao/contribuicao.md
+      - Configuração: configuracao/configuracao.md
 
   - Arquitetura: architecture/architecture.md
 
@@ -18,6 +17,9 @@ nav:
       - Releases Notes: documentation/releasesnotes.md
 
   - Protótipo: prototipo/prototipo.md
+
+  - Políticas:
+      - Contribuição: politicas/contribuicao.md
 
   - Registros:
       - Organização da equipe: registros/organizacaoequipe.md
