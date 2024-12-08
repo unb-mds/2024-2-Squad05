@@ -8,6 +8,11 @@
   <body>
     <h1>Participatory Processes</h1>
 
+    <p>
+      Simple example of how to use the Decidim API to list participatory
+      processes.
+    </p>
+
     {% if data.error %}
     <p>Error: {{ data.error }}</p>
     {% else %}
@@ -20,9 +25,6 @@
       </li>
       {% endfor %}
     </ul>
-
-    <h2>Decidim Version</h2>
-    <p>{{ data.data.decidim.version }}</p>
     {% endif %}
   </body>
 </html>
