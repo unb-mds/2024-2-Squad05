@@ -4,10 +4,8 @@ site_name: Lumina - Análise de Sentimentos
 nav:
   - Home: index.md
 
-  - Configuração :
+  - Configuração e Contribuição:
       - Configuração: configuracaoecontribuicao/configuracao.md
-
-  - Contribuição:
       - Contribuição: configuracaoecontribuicao/contribuicao.md
 
   - Arquitetura: architecture/architecture.md
