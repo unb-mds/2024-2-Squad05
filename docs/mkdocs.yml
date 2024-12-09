@@ -19,7 +19,12 @@ nav:
   - Protótipo: prototipo/prototipo.md
 
   - Políticas:
+      - Plano de Comunicação: politicas/plano_comunicacao.md
+      - Conduta: politicas/conduta.md
       - Contribuição: politicas/contribuicao.md
+      - Commits: politicas/commits.md
+      - Branchs: politicas/branchs.md
+      - Issues: politicas/issue_tamplates.md
 
   - Registros:
       - Organização da equipe: registros/organizacaoequipe.md
