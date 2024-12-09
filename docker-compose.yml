@@ -8,7 +8,6 @@ services:
       - .:/app
     environment:
       - DEBUG= True
-      - API_KEY= "YOUR_KEY"
     depends_on:
       - db
 

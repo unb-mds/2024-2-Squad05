@@ -65,26 +65,19 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
+# Configuração para usar o banco de dados :
+# - Para usar a aplicação localmente, altere os dados abaixo para os dados do seu banco de dados PostgreSQL.
+# - Para usar o Docker, mantenha os dados abaixo.
 DATABASES = {
-    
-    'default': {
+     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'lumina_db',
         'USER': 'lumina_user',
         'PASSWORD' : 'lumina_password',
         'HOST': 'db',
         'PORT': '5432'
-    },
-    
-    # Para usar a aplicação localmente, descomente o código abaixo e comente o código acima
-    #  'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'lumina_db',
-    #     'USER': 'lumina_user',
-    #     'PASSWORD' : 'lumina_password',
-    #     'HOST': 'localhost',
-    #     'PORT': '5432'
-    # }
+    }
 }
 
 

@@ -3,27 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brasil Participativo</title>
+    <title>Sentiment Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <h1>Processos Participativos</h1>
-    <ul>
-      {% for process in participatory_processes %}
-      <li>
-        <strong>ID:</strong> {{ process.id }}<br />
-        <strong>Títulos:</strong>
-        <ul>
-          {% for translation in process.title.translations %}
-          <li>
-            <strong>{{ translation.locale }}:</strong> {{ translation.text }}
-          </li>
-          {% endfor %}
-        </ul>
-      </li>
-      {% endfor %}
-    </ul>
+  <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto p-4">
+      <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">
+        Analyze Sentiment
+      </h1>
 
-    <h2>Decidim Version</h2>
-    <p>{{ decidim_version }}</p>
+      <!-- Formulário para entrada do comentário -->
+      <form method="POST" class="mb-6">
+        {% csrf_token %}
+        <div class="mb-4">
+          <label
+            for="comment"
+            class="block text-gray-700 text-sm font-bold mb-2"
+            >Enter your comment:</label
+          >
+          <textarea
+            id="comment"
+            name="comment"
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            rows="4"
+            placeholder="Type your comment here..."
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Analyze
+        </button>
+      </form>
+
+      <!-- Exibição do resultado -->
+      {% if sentiment_result %}
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <p class="text-lg font-semibold text-gray-700">
+          {{ sentiment_result.comment }}
+        </p>
+        <div class="mt-4">
+          <span
+            class="inline-block px-3 py-1 rounded-full text-sm font-medium {% if sentiment_result.sentiment == 0 %}bg-red-500 text-white {% elif sentiment_result.sentiment == 4 %}bg-green-500 text-white {% elif sentiment_result.sentiment >= 2 %}bg-yellow-500 text-white {% else %}bg-gray-300 text-gray-700{% endif %}"
+          >
+            Sentiment: {{ sentiment_result.sentiment }}
+          </span>
+        </div>
+      </div>
+      {% endif %}
+    </div>
   </body>
 </html>
