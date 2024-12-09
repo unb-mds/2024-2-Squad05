@@ -1,9 +1,10 @@
+requests>=2.32.0
+certifi>=2024.8.30
 openai>=1.56.1
 typing_extensions>=4.12.2
 colorama>=0.4.6
-certifi>=2024.8.30
 idna>=3.10
 pydantic>=2.10.3
 streamlit>=1.40.0
 django>=5.1.4
-requests>=2.32.0
+psycopg2>=2.9.10

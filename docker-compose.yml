@@ -1,4 +1,3 @@
-version: '3.7'
 services:
   web:
     container_name: lumina-web
@@ -17,9 +16,9 @@ services:
     image: postgres:latest
     container_name: lumina-db
     environment:
+      POSTGRES_DB: lumina_db
       POSTGRES_USER: lumina_user
       POSTGRES_PASSWORD: lumina_password
-      POSTGRES_DB: lumina_db
     volumes:
       - lumina_db_data:/var/lib/postgresql/data
     ports:

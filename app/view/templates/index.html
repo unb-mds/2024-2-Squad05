@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Participatory Processes</title>
+    <title>Brasil Participativo</title>
   </head>
   <body>
-    <h1>Participatory Processes</h1>
-
-    <p>
-      Simple example of how to use the Decidim API to list participatory
-      processes.
-    </p>
-
-    {% if data.error %}
-    <p>Error: {{ data.error }}</p>
-    {% else %}
-    <h2>Participatory Processes</h2>
+    <h1>Processos Participativos</h1>
     <ul>
-      {% for process in data.data.participatoryProcesses %}
+      {% for process in participatory_processes %}
       <li>
-        <strong>{{ process.title.translations.0.text }}</strong> (ID: {{
-        process.id }})
+        <strong>ID:</strong> {{ process.id }}<br />
+        <strong>Títulos:</strong>
+        <ul>
+          {% for translation in process.title.translations %}
+          <li>
+            <strong>{{ translation.locale }}:</strong> {{ translation.text }}
+          </li>
+          {% endfor %}
+        </ul>
       </li>
       {% endfor %}
     </ul>
-    {% endif %}
+
+    <h2>Decidim Version</h2>
+    <p>{{ decidim_version }}</p>
   </body>
 </html>

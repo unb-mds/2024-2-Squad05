@@ -1,56 +1,39 @@
 import requests
 from django.shortcuts import render
 
-# URL da API GraphQL
-GRAPHQL_URL = "https://brasilparticipativo.presidencia.gov.br/api"
-
-# Consulta GraphQL
-query = """
-{
-  participatoryProcesses {
-    id
-    title {
-      translations {
-        locale
-        text
+def index(request):
+    endpoint = "https://brasilparticipativo.presidencia.gov.br/api"
+    query = """
+    {
+      participatoryProcesses {
+        id
+        title {
+          translations {
+            locale
+            text
+          }
+        }
+      }
+      decidim {
+        version
       }
     }
-  }
-  decidim {
-    version
-  }
-}
-
-"""
-
-def fetch_participatory_processes():
-    # Cabeçalhos da requisição
-    headers = {
-        "Content-Type": "application/json",
-        "Accept": "application/json",  
-    }
-
-    # Corpo da requisição
-    json_data = {
-        "query": query
-    }
-
-    # Realizando a requisição POST
-    response = requests.post(GRAPHQL_URL, json=json_data, headers=headers)
-
-    # Verificando se a requisição foi bem-sucedida
-    if response.status_code == 200:
-        return response.json()  # Retorna os dados da resposta em formato JSON
-    else:
-        # Caso ocorra algum erro
-        raise Exception(f"Erro na requisição: {response.status_code} - {response.text}")
-
-def index(request):
+    """
     try:
-        # Buscando os dados da API GraphQL
-        data = fetch_participatory_processes()
+        response = requests.post(endpoint, json={"query": query})
+        if response.status_code == 200:
+            data = response.json()
+            participatory_processes = data.get("data", {}).get("participatoryProcesses", [])
+            decidim_version = data.get("data", {}).get("decidim", {}).get("version", "N/A")
+        else:
+            participatory_processes = []
+            decidim_version = "Erro ao obter a versão"
     except Exception as e:
-        data = {"error": str(e)}
+        participatory_processes = []
+        decidim_version = f"Erro: {str(e)}"
 
-    # Retorna os dados para renderizar no template
-    return render(request, 'index.html', {'data': data})
+    # Renderizar os dados no template index.html
+    return render(request, "index.html", {
+        "participatory_processes": participatory_processes,
+        "decidim_version": decidim_version,
+    })
