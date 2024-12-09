@@ -72,9 +72,19 @@ DATABASES = {
         'NAME': 'lumina_db',
         'USER': 'lumina_user',
         'PASSWORD' : 'lumina_password',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432'
-    }
+    },
+    
+    # Para usar a aplicação localmente, descomente o código abaixo e comente o código acima
+    #  'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'lumina_db',
+    #     'USER': 'lumina_user',
+    #     'PASSWORD' : 'lumina_password',
+    #     'HOST': 'localhost',
+    #     'PORT': '5432'
+    # }
 }
 
 
