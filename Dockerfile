@@ -17,11 +17,3 @@ COPY . .
 
 # Expor a porta padrão do Django
 EXPOSE 8000
-
-# Install Node.js
-RUN apt-get update && apt-get install -y curl
-RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - 
-RUN apt-get install -y nodejs
-
-# Executar o comando de inicialização do Django
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

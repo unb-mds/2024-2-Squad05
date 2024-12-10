@@ -75,7 +75,7 @@ DATABASES = {
         'NAME': 'lumina_db',
         'USER': 'lumina_user',
         'PASSWORD' : 'lumina_password',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432'
     }
 }
