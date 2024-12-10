@@ -1,7 +1,6 @@
 from openai import OpenAI
 from pydantic import BaseModel
 
-client = OpenAI(api_key=input("API Key: "))
 
 class Sentiment(BaseModel):
     comment: str
@@ -77,6 +76,8 @@ The output should be in JSON format specifying the identified sentiment category
 
 
 def get_response(message, sys_prompt):
+    client = OpenAI(
+        api_key="COLOCAR CHAVE AQUI!!")
     completion = client.beta.chat.completions.parse(
         model="gpt-4o-2024-08-06",
         messages=[
@@ -86,6 +87,11 @@ def get_response(message, sys_prompt):
         response_format=Sentiment,
     )
     return completion.choices[0].message.parsed
+
+
+def str_response(sentiment: int):
+    data = ["Muito negativo", "Negativo", "Neutro", "Positivo", "Muito positivo"]
+    return data[sentiment]
 
 
 def analyze_sentiment(text: str) -> int:
@@ -98,8 +104,3 @@ def analyze_sentiment(text: str) -> int:
             raise ValueError
     except ValueError:
         return -1
-
-
-while True:
-    user_input = input("User: ")
-    print(f"Bot: {analyze_sentiment(user_input)}")
