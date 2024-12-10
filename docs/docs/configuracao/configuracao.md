@@ -1,6 +1,6 @@
 # Guia de Configuração e Execução do Projeto
 
-Este guia fornece instruções detalhadas para configurar e executar o projeto Lumina, que utiliza Django, TailwindCSS, Docker e PostgreSQL. Você pode optar por configurar o projeto em um ambiente local ou utilizar Docker para simplificar o processo. Recomendamos o uso do Docker para uma configuração mais rápida e consistente. Siga as instruções abaixo conforme sua preferência.
+Este guia fornece instruções detalhadas para configurar e executar o projeto Lumina. Você pode optar por configurar o projeto em um ambiente local ou utilizar Docker para simplificar o processo. Recomendamos o uso do Docker para uma configuração mais rápida e consistente, garantindo que todos os serviços necessários estejam disponíveis.
 
 ---
 
@@ -11,15 +11,13 @@ Certifique-se de ter os seguintes pré-requisitos instalados:
 ### Ambiente Local
 
 - **Python 3.13** ou superior
-- **PostgreSQL** (se preferir usar localmente)
-- **Node.js** (versão 20 ou superior) e **npm**
-- **pip** e **venv** para gerenciamento de dependências
-- **TailwindCSS CLI** (instalado via npm)
+- **PostgreSQL**
+- **pip** e **venv**
 - **Git** (opcional, para gerenciar o repositório)
 
 ### Docker
 
-- **Docker** (recomendado: versão mais recente)
+- **Docker**
 - **Docker Compose**
 
 ---
@@ -28,78 +26,20 @@ Certifique-se de ter os seguintes pré-requisitos instalados:
 
 Nossa aplicação é composta por dois serviços: `web` (Django) e `db` (PostgreSQL). A configuração e execução do projeto pode ser feita de duas formas: localmente ou usando Docker. Siga as instruções abaixo de acordo com a sua preferência.
 
-## 1. Desenvolvimento Local
+## 1. Docker
+
+É necessário a instalação do Docker e Docker Compose para executar o projeto com Docker. Você pode instalar o Docker Desktop para Windows e Mac ou o Docker Engine para Linux. Para instalar o Docker Compose, siga as instruções disponíveis na [documentação oficial](https://docs.docker.com/compose/install/).
 
 ### Passo 1: Clonar o repositório
 
 ```bash
 git clone https://github.com/unb-mds/2024-2-Squad05.git
-```
-
-### Passo 2: Configurar o ambiente virtual e instalar dependências
-
-Entre no repositório clonado e execute os seguintes comandos no terminal:
-
-```bash
-python -m venv venv
-
-source venv/bin/activate        # Para Linux/Mac
-venv\Scripts\activate           # Para Windows
-
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-### Passo 3: Configurar o banco de dados local
-
-Configure o PostgreSQL com os seguintes dados:
-
-- Banco de dados: `lumina_db`
-- Usuário: `lumina_user`
-- Senha: `lumina_password`
-
-Atualize a variável `HOST` no arquivo `settings.py` para `127.0.0.1` ou `localhost`. Note que o PostgreSQL deve estar rodando localmente.
-
-### Passo 4: Configurar o TailwindCSS
-
-Instale o TailwindCSS CLI:
-
-```bash
-npm install -g tailwindcss
-```
-
-Compile os estilos com:
-
-```bash
-tailwindcss -i ./app/view/static/css/style.css -o ./app/view/static/dist style.css --watch
-```
-
-### Passo 5: Executar as migrações
-
-```bash
-python manage.py makemigrations
-python manage.py migrate
-```
-
-### Passo 6: Executar o servidor local
-
-```bash
-python manage.py runserver
-```
-
-Acesse em: [http://127.0.0.1:8000](http://127.0.0.1:8000).
-
-## 2. Docker
-
-### Passo 1: Clonar o repositório
-
-```bash
-git clone https://github.com/unb-mds/2024-2-Squad05.git
+cd 2024-2-Squad05
 ```
 
 ### Passo 2: Construir e iniciar os contêineres
 
-Altere para a pasta clonada. Certifique-se de que o Docker está ativo e execute:
+Primeiramente, verifique se o Docker está rodando. Em seguida, execute o comando abaixo para construir e iniciar os contêineres:
 
 ```bash
 docker-compose up --build
@@ -113,26 +53,61 @@ Monitore os logs:
 docker-compose logs -f
 ```
 
-### Passo 4: Inicializar o banco de dados (primeira execução)
+### Passo 4: Acessar a aplicação
 
-Acesse o contêiner do Django e aplique as migrações:
+Acesse em: [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+> **Dica:** Para facilitar o processo de desenvolvimento, considere utilizar extensões do VS Code como o [**Python**](https://marketplace.visualstudio.com/items?itemName=ms-python.python) e o [**Docker**](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker). Essas extensões fornecem suporte avançado para desenvolvimento em Python e gerenciamento de contêineres Docker diretamente do editor. Além disso, o **Docker Desktop** oferece uma interface gráfica amigável para gerenciar seus contêineres e imagens Docker.
+
+## 2. Desenvolvimento Local
+
+### Passo 1: Clonar o repositório
 
 ```bash
-docker exec -it lumina-web bash
+git clone https://github.com/unb-mds/2024-2-Squad05.git
+cd 2024-2-Squad05
+```
+
+### Passo 2: Configurar o ambiente virtual e instalar dependências
+
+Após clonar o repositório, crie um ambiente virtual e instale as dependências. Isso garante que as dependências do projeto não entrem em conflito com outras aplicações Python instaladas no seu sistema. Execute os comandos abaixo:
+
+```bash
+python -m venv venv
+
+source venv/bin/activate        # Para Linux/Mac
+venv\Scripts\activate           # Para Windows
+
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### Passo 3: Configurar o banco de dados local
+
+Esta eta é necessária apenas se você optar por configurar o banco de dados localmente. Será necessário instalar o PostgreSQL e criar um banco de dados e um usuário para o projeto. Um tutorial de como fazer a instalação do PostgreSQL pode ser encontrado [aqui](https://www.postgresql.org/download/).
+
+Configure o PostgreSQL com os seguintes dados:
+
+- Banco de dados: `lumina_db`
+- Usuário: `lumina_user`
+- Senha: `lumina_password`
+
+Atualize a variável `HOST` no arquivo `settings.py` para `127.0.0.1` ou `localhost`. O PostgreSQL deve estar rodando localmente.
+
+### Passo 4: Executar as migrações
+
+O projeto utiliza o Django ORM para gerenciar o banco de dados, então é necessário executar as migrações para criar as tabelas necessárias. Execute os comandos abaixo:
+
+```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-### Passo 5: Compilar o TailwindCSS
-
-Ainda dentro do contêiner do Django, compile os estilos com:
+### Passo 5: Executar o servidor local
 
 ```bash
-npm install -g tailwindcss
-tailwindcss -i ./app/view/static/css/style.css -o ./app/view/static/dist/style.css --watch
+python manage.py runserver
 ```
-
-### Passo 6: Acessar a aplicação
 
 Acesse em: [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
@@ -140,6 +115,7 @@ Acesse em: [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 Tabela de Versionamento
 
-| Versão | Data       | Descrição       | Autor(es)     |
-| ------ | ---------- | --------------- | ------------- |
-| 1.0    | 09/12/2024 | Criação inicial | Luiz Henrique |
+| Versão | Data       | Descrição              | Autor(es)     |
+| ------ | ---------- | ---------------------- | ------------- |
+| 1.0    | 09/12/2024 | Criação inicial        | Luiz Henrique |
+| 1.1    | 10/12/2024 | Atualização das etapas | Luiz Henrique |
