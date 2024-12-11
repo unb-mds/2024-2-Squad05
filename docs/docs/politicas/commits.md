@@ -50,7 +50,7 @@ Define o tipo de mudança realizada no commit. Os valores mais comuns incluem:
   - **Sem ponto final** ao final da frase.
 
 
-### **Benefícios**
+## Benefícios
 - Melhor legibilidade e consistência em projetos colaborativos.
 - Facilita a geração de changelogs automáticos.
 - Simplifica o entendimento do histórico de commits e as áreas impactadas.

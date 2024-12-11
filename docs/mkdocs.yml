@@ -53,8 +53,8 @@ theme:
 
   # Configurações de cores e fontes
   palette:
-    primary: green
-    accent: light green
+    primary: blue
+    accent: light blue
   font:
     text: Roboto
     code: Roboto Mono
