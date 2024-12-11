@@ -11,13 +11,14 @@ Os nomes das branches devem seguir um padrão composto por **3 partes**:
    - **style**: Alterações que não impactam o comportamento do código (ex.: espaços em branco, formatação, ponto e vírgula).  
    - **test**: Adicionar ou corrigir testes.
 
+
 2. **Descrição**  
    Um resumo claro e objetivo do que o branch faz.
+
 
 3. **Número da Issue**  
    O identificador numérico da issue relacionada, precedido por `#`.
 
----
 
 ## Exemplos de Nomes de Branches  
 
@@ -30,7 +31,6 @@ Os nomes das branches devem seguir um padrão composto por **3 partes**:
 - **fix-busca-checklists-23**  
   _Corrige um bug na funcionalidade de busca em checklists, issue #23._  
 
----
 
 Seguir este padrão ajuda a manter o controle e a organização do repositório.
 

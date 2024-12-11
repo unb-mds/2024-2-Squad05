@@ -3,23 +3,21 @@
 ### Conventional Commits
 Conventional Commits é uma especificação para criar mensagens de commit que sejam legíveis por humanos e máquinas, facilitando a colaboração e a manutenção de projetos.
 
----
 
 ### Formato
-<type>[scope]: <subject>
+`<type>[scope]: <subject>`
 
----
 
 ### Exemplos
 1. `docs: update README to add developer tips`
 2. `feat[auth]: add password recovery flow`
 
----
 
 ### Explicação dos Campos
 
  **1. `type` (tipo)** 
 Define o tipo de mudança realizada no commit. Os valores mais comuns incluem:
+
 - **feat**: Uma nova funcionalidade.
 - **fix**: Correção de um bug.
 - **docs**: Mudanças apenas na documentação.
@@ -32,40 +30,36 @@ Define o tipo de mudança realizada no commit. Os valores mais comuns incluem:
 - **build**: Alterações no sistema de build ou dependências externas.
 - **temp**: Commit temporário que será removido e não entrará no changelog.
 
----
 
  **2. `scope` (escopo)**
+
 - **Opcional**.
 - Especifica a área ou módulo impactado pela mudança. Exemplos:
+
   - `[auth]` para mudanças relacionadas à autenticação.
   - `[api]` para alterações na API.
   - `[dashboard]` para o painel administrativo.
 
----
 
  **3. `subject` (assunto)**
 - Um resumo breve e claro da mudança, escrito em **tempo presente**.
+
 - **Regras**:
   - **Escreva no presente** (ex.: *add*, *fix*, *update*).
   - **Minúsculo** no início.
   - **Sem ponto final** ao final da frase.
 
----
 
-## #**Benefícios**
+### **Benefícios**
 - Melhor legibilidade e consistência em projetos colaborativos.
 - Facilita a geração de changelogs automáticos.
 - Simplifica o entendimento do histórico de commits e as áreas impactadas.
 
 ---
 
-### **Modelo para Referência**
-```plaintext
-<type>[scope]: <subject>
-
-
 Tabela de Versionamento
 
 | Versão | Data       | Descrição                                                     | Autor(es)        |
 |--------|------------|---------------------------------------------------------------|------------------|
 | 1.0    | 09/12/2024 | Criação inicial                       | LARYSSA FELIX |
+| 2.0    | 11/12/2024 | Crorreções                       | LARYSSA FELIX |

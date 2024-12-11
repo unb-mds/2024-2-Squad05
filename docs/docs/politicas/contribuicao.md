@@ -6,7 +6,7 @@ Sua participação é essencial para o sucesso do nosso projeto. Você pode cont
 Verifique na seção de Issues se já existe uma relacionada ao problema ou melhoria que você deseja abordar.
 Caso não encontre, crie uma nova issue. 
 
-- Certifique-se de:
+Certifique-se de:
     - Adicionar um título claro e objetivo
     - Fornecer uma descrição detalhada para que todos possam compreender o contexto
     - Designar pelo menos um Assignee
@@ -19,7 +19,7 @@ Realize as alterações necessárias utilizando sua IDE preferida e siga as boas
 ### 3. Envie um Pull Request
 Quando finalizar o trabalho, crie um Pull Request vinculado à sua issue.
 
-- Lembre-se de:
+Lembre-se de:
     - Linkar o PR a sua Issue correspondente
     - Solicitar a revisão de um dos responsáveis pelo projeto
     - Garantir que sua proposta atende aos critérios definidos
