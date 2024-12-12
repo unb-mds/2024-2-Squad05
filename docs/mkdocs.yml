@@ -1,12 +1,11 @@
-site_name: Squad 05 - 2024/2
+site_name: Lumina - Análise de Sentimentos
 
 # Configurações de navegação
 nav:
   - Home: index.md
 
-  - Configuração e Contribuição:
-      - Configuração: configuracaoecontribuicao/configuracao.md
-      - Contribuição: configuracaoecontribuicao/contribuicao.md
+  - Configuração:
+      - Configuração: configuracao/configuracao.md
 
   - Arquitetura: architecture/architecture.md
 
@@ -18,6 +17,14 @@ nav:
       - Releases Notes: documentation/releasesnotes.md
 
   - Protótipo: prototipo/prototipo.md
+
+  - Políticas:
+      - Plano de Comunicação: politicas/plano_comunicacao.md
+      - Conduta: politicas/conduta.md
+      - Contribuição: politicas/contribuicao.md
+      - Commits: politicas/commits.md
+      - Branchs: politicas/branchs.md
+      - Issues: politicas/issue_tamplates.md
 
   - Registros:
       - Organização da equipe: registros/organizacaoequipe.md
@@ -46,8 +53,8 @@ theme:
 
   # Configurações de cores e fontes
   palette:
-    primary: green
-    accent: light green
+    primary: blue
+    accent: light blue
   font:
     text: Roboto
     code: Roboto Mono
