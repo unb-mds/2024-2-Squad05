@@ -1,9 +1,9 @@
-## Bug
+## **Bug**
 
 ### Descrição
 [Descreva aqui o problema ou a solicitação de recurso de forma clara e concisa]
 
-## #Etapas para Reproduzir o Problema
+### Etapas para Reproduzir o Problema
 1. [Descreva a primeira etapa para reproduzir o problema]
 2. [Descreva a segunda etapa]
 3. [Continue listando as etapas, se necessário]
@@ -23,7 +23,7 @@
 
 ----
 
-## Feature
+## **Feature**
 
 ### Descrição da Solicitação de Recurso
 [Descreva aqui a solicitação de recurso de forma clara e concisa]
@@ -39,7 +39,7 @@
 
 ----
 
-## Custom 
+## **Custom** 
 
 ### Descrição da Issue
 [Descrever de forma sucinta a issue, colocando quaisquer informações necessárias para a realização dessa.]
@@ -68,7 +68,7 @@ Deve-se definir uma estimativa de dificuldade (pontuação) à issue em questão
 
 ----
 
-## Pull Request
+## **Pull Request**
 
 ### O que mudou?
 Qual foi a mudança significativa para que haja um Pull Request?  
