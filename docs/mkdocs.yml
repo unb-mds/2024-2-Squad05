@@ -13,7 +13,7 @@ nav:
       - Documentação Visual: documentation/miro.md
       - Requisitos: documentation/requisitos.md
       - Product Backlog: documentation/productbacklog.md
-      - Sprints: documentation/sprints.md
+      - Sprints: documentation/sprints/sprint-3/Sprint_3.md
       - Releases Notes: documentation/releasesnotes.md
 
   - Protótipo: prototipo/prototipo.md
