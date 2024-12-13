@@ -24,7 +24,21 @@ Descrição do que será feito em cada Sprint:
 
 #### Sprint 3
 
+- Definir Requisitos
+- Estudar tecnologias a serem adotadas
+- Definir Identidade Visual
+- Definição Histórias de Usuário
+- Organização do Miro
+- Estruturar Git Page
+- Atualização Readme do projeto
+- Definir Tecnologias
+
 #### Sprint 4
+
+- Prototipação de Baixa Fidelidade
+- Definir Arquitetura
+- Definir Componentes
+- Rotação do Cargo de Scrum Master
 
 #### Sprint 5
 
