@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app.view',
     'app.data',
-    'app.logic',
     'app.manipulation',
 ]
 
