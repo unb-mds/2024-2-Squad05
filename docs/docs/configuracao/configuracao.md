@@ -2,6 +2,8 @@
 
 Este guia fornece instruções detalhadas para configurar e executar o projeto Lumina. Você pode optar por configurar o projeto em um ambiente local ou utilizar Docker para simplificar o processo. Recomendamos o uso do Docker para uma configuração mais rápida e consistente, garantindo que todos os serviços necessários estejam disponíveis.
 
+> **Nota:** Este guia assume que você possui conhecimentos básicos de Python, Django, PostgreSQL e Docker. Se você não estiver familiarizado com essas tecnologias, recomendamos que você faça um curso introdutório ou leia a documentação oficial antes de prosseguir.
+
 ---
 
 ## Pré-requisitos
@@ -26,6 +28,10 @@ Certifique-se de ter os seguintes pré-requisitos instalados:
 ## Configuração e Execução
 
 Nossa aplicação é composta por dois serviços: `web` (Django) e `db` (PostgreSQL). A configuração e execução do projeto pode ser feita de duas formas: localmente ou usando Docker. Siga as instruções abaixo de acordo com a sua preferência.
+
+A aplicação utiliza a API do OpenAI par gerar análise de sentimentos de textos. Para utilizar a API, é necessário criar uma conta no site da [OpenAI](https://platform.openai.com/signup) e obter uma chave de API.
+
+Você pode optar por desenvolver localmente ou utilizar Docker para simplificar o processo de configuração. A seguir, são apresentadas as instruções para cada uma das opções.
 
 ## 1. Docker
 
@@ -53,8 +59,6 @@ Para verificar os logs dos contêineres e garantir que tudo está funcionando co
 ```bash
 docker compose logs -f
 ```
-
-> Atenção: A aplicação utiliza a API da OpenAI para realizar a análise de sentimentos. Para utilizar a API, é necessário configurar a variável `OPENAI_API_KEY` com a sua chave de acesso.
 
 ### Passo 4: Acessar a aplicação
 
