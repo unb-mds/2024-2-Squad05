@@ -5,6 +5,8 @@
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/Ngueqb8dijxpMLa3R6r19i/Lumina-BaixaFidelidade?node-id=0-1&embed-host=share" allowfullscreen></iframe>
 
 ### Segunda versão
+
+Após a criação do primeiro protótipo, nossa equipe realizou uma análise aprofundada e identificou pontos de melhoria e novas possibilidades. Refletimos sobre o que poderia agregar mais valor à versão definitiva. Assim, ajustaremos funcionalidades e priorizaremos elementos que melhor atendam às expectativas. Continuamos comprometidos com um produto final de alta qualidade!
 ---
 
 
