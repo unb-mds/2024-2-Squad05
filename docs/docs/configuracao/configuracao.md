@@ -12,7 +12,8 @@ Certifique-se de ter os seguintes pré-requisitos instalados:
 
 - **Python 3.13** ou superior
 - **PostgreSQL**
-- **pip** e **venv**
+- **pip**
+- **venv** (opcional, para criar um ambiente virtual)
 - **Git** (opcional, para gerenciar o repositório)
 
 ### Docker
@@ -39,19 +40,21 @@ cd 2024-2-Squad05
 
 ### Passo 2: Construir e iniciar os contêineres
 
-Primeiramente, verifique se o Docker está rodando. Em seguida, execute o comando abaixo para construir e iniciar os contêineres:
+Primeiramente, certifique-se que a instalação do Docker e Docker Compose foram bem sucedidas e que estão sendo executados. Em seguida, execute o comando abaixo para construir e iniciar os contêineres:
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 ### Passo 3: Verificar logs e garantir que tudo está funcionando
 
-Monitore os logs:
+Para verificar os logs dos contêineres e garantir que tudo está funcionando corretamente, execute o comando abaixo:
 
 ```bash
-docker-compose logs -f
+docker compose logs -f
 ```
+
+> Atenção: A aplicação utiliza a API da OpenAI para realizar a análise de sentimentos. Para utilizar a API, é necessário configurar a variável `OPENAI_API_KEY` com a sua chave de acesso.
 
 ### Passo 4: Acessar a aplicação
 
@@ -77,29 +80,43 @@ python -m venv venv
 
 source venv/bin/activate        # Para Linux/Mac
 venv\Scripts\activate           # Para Windows
+```
 
+Em seguida, instale as dependências do projeto:
+
+```python
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
 ### Passo 3: Configurar o banco de dados local
 
-Esta eta é necessária apenas se você optar por configurar o banco de dados localmente. Será necessário instalar o PostgreSQL e criar um banco de dados e um usuário para o projeto. Um tutorial de como fazer a instalação do PostgreSQL pode ser encontrado [aqui](https://www.postgresql.org/download/).
+Esta etapa é necessária apenas se você optar por desenvolver localmente. Será necessário instalar o PostgreSQL e criar um banco de dados e um usuário para o projeto. Um tutorial de como fazer a instalação do PostgreSQL pode ser encontrado [aqui](https://www.postgresql.org/download/).
 
-Configure o PostgreSQL com os seguintes dados:
+Atualize as seguintes variáveis no arquivo `settings.py` para refletir as configurações do seu banco de dados local:
 
-- Banco de dados: `lumina_db`
-- Usuário: `lumina_user`
-- Senha: `lumina_password`
-
-Atualize a variável `HOST` no arquivo `settings.py` para `127.0.0.1` ou `localhost`. O PostgreSQL deve estar rodando localmente.
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'lumina_db',
+        'USER': 'lumina_user',
+        'PASSWORD': 'lumina_password',
+        'HOST': '127.0.0.1',  # ou 'localhost'
+        'PORT': '5432',
+    }
+}
+```
 
 ### Passo 4: Executar as migrações
 
 O projeto utiliza o Django ORM para gerenciar o banco de dados, então é necessário executar as migrações para criar as tabelas necessárias. Execute os comandos abaixo:
 
 ```bash
+# Criar as migrações iniciais
 python manage.py makemigrations
+
+# Aplicar as migrações no banco de dados
 python manage.py migrate
 ```
 
@@ -119,3 +136,4 @@ Tabela de Versionamento
 | ------ | ---------- | ---------------------- | ------------- |
 | 1.0    | 09/12/2024 | Criação inicial        | Luiz Henrique |
 | 1.1    | 10/12/2024 | Atualização das etapas | Luiz Henrique |
+| 1.2    | 12/12/2024 | Atualização das etapas | Luiz Henrique |
