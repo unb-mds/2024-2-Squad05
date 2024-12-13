@@ -1,11 +1,23 @@
-## Lorem Ipsum
+<div align="justify"> O <strong>
+Para garantir a agilidade e o contínuo aprimoramento, nossa reunião semanal, realizada aos sábados, é estruturadas em três momentos colaborativos:
+<div>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+1. **Sprint Retrospective:** Usamos um template no Miro para refletir sobre a sprint passada. Essa etapa é fundamental para aprendermos com nossas experiências, celebrar nossos sucessos e identificar áreas de melhoria.
+2. **Sprint Review:** Avaliamos as entregas da sprint anterior, comparando com os objetivos definidos no início. Esse momento é crucial para obter feedback e garantir que estamos no caminho certo.
+3. **Sprint Planning:** Definimos as prioridades e tarefas para a próxima sprint, garantindo que todos os membros da equipe estejam alinhados e comprometidos com os objetivos.
 
-### Subtítulo
+Nas terças e quintas, realizamos atualizações sobre o andamento das demandas de cada integrante da equipe durante a sprint. Esse momento é estruturado em três tópicos:
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+1. **O que foi feito ontem**
+2. **O que será feito hoje**
+3. **Quais obstáculos ou impedimentos estou enfrentando**
 
-#### Outro Subtítulo
+O objetivo é manter as comunicações claras e objetivas. Geralmente, essa atualização ocorre de forma assíncrona pelo WhatsApp. No entanto, quando necessário, realizamos encontros síncronos utilizando o Google Meet.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+---
+
+Tabela de Versionamento
+
+| Versão | Data       | Descrição                                                     | Autor(es)        |
+|--------|------------|---------------------------------------------------------------|------------------|
+| 1.0    | 13/12/2024 | Criação inicial                       | LARYSSA FELIX |
