@@ -9,6 +9,8 @@
 <div align="justify"> Após a criação do primeiro protótipo, nossa equipe realizou uma análise aprofundada e identificou pontos de melhoria e novas possibilidades. Refletimos sobre o que poderia agregar mais valor à versão definitiva. Assim, ajustaremos funcionalidades e priorizaremos elementos que melhor atendam às expectativas. Continuamos comprometidos com um produto final de alta qualidade! </div>
 
 <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/Z5ENa28eSiuhwnJIRKUkVL/Lumina-AltaFidelidade?embed-host=share" allowfullscreen></iframe>
+
+<div align="justify"> Ainda não estamos na versão final, mas estamos bem perto de alcançá-la. Já temos uma base sólida, e agora estamos focados em ajustar e refinar cada detalhe. Queremos garantir que tudo esteja alinhado com o que planejamos, entregando a melhor versão possível! </div>
 ---
 
 
