@@ -1,6 +1,5 @@
-<div align="justify"> O <strong>
 Para garantir a agilidade e o contínuo aprimoramento, nossa reunião semanal, realizada aos sábados, é estruturadas em três momentos colaborativos:
-<div>
+
 
 1. **Sprint Retrospective:** Usamos um template no Miro para refletir sobre a sprint passada. Essa etapa é fundamental para aprendermos com nossas experiências, celebrar nossos sucessos e identificar áreas de melhoria.
 2. **Sprint Review:** Avaliamos as entregas da sprint anterior, comparando com os objetivos definidos no início. Esse momento é crucial para obter feedback e garantir que estamos no caminho certo.
