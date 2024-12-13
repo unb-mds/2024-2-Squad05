@@ -19,4 +19,5 @@ Tabela de Versionamento
 | Versão | Data       | Descrição                                                     | Autor(es)        |
 |--------|------------|---------------------------------------------------------------|------------------|
 | 1.0    | 28/11/2024 | Criação inicial                       | Arthur Fernandes, Laryssa Felix e Letícia Monteiro |
-| 1.1    | 01/12/2024 | Estruturação e atualização                       | Gabriel Pinto |
+| 1.1    | 01/12/2024 | Estruturação e atualização                                         | Gabriel Pinto |
+| 1.1    | 13/12/2024 | Atualização e inserção dos modelos criados                      | Letícia Monteiro |
