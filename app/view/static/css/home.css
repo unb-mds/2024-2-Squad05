@@ -1,0 +1,24 @@
+.container {
+    display: flex; /* Alinha os itens em uma linha */
+    justify-content: space-between; /* Espaço uniforme entre os itens */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 20px; /* Espaço entre o texto e a imagem */
+    padding: 20px; /* Espaçamento interno do contêiner */
+}
+
+.Text {
+    flex: 1; /* Faz o texto ocupar 50% do espaço disponível */
+}
+
+.Img {
+    flex: 1; /* Faz a imagem ocupar 50% do espaço disponível */
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    height: 250px;
+    width: 250px;
+}
+
+.Img img {
+    max-width: 100%; /* Ajusta a largura da imagem ao espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+}
