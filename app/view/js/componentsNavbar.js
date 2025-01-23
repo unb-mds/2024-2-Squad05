@@ -9,7 +9,8 @@ class Navbar extends HTMLElement {
     
                 <div class="nav-list">
                     <ul>
-                        <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Analise</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Tópicos</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Sobre Nós</a></li>
                     </ul>
