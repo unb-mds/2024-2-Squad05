@@ -114,10 +114,11 @@ h2 {
     margin-bottom: 80px;
 }
 
-.participate-container .Text {
+.Text {
     flex: 1;
     margin-left: 20px;
-    text-align: center; /* Garantir que o texto fique alinhado à esquerda */
+    text-align: left; /* Garantir que o texto fique alinhado à esquerda */
+   
 }
 
 .participate-container .Img {
@@ -128,8 +129,8 @@ h2 {
 }
 
 .participate-container .Img img {
-    max-width: 80%; /* Ajuste do tamanho da imagem */
-    height: auto;
+    width: 450px; 
+    height: 260px;
 }
 .container{
     margin-bottom: 70px;
@@ -139,4 +140,63 @@ h2 {
     padding-top: 10px;
     width: 100%; /* Ajuste do tamanho da imagem */
     height: 100%;
+}
+
+.pt-titulo{
+    color: #007FFF;
+}
+
+.partners-container {
+    background-color: #fe9a0d8e; /* Cor de fundo laranja */
+    color: #0653A1; /* Texto branco para contraste */
+    padding: 40px 20px; /* Espaçamento interno */
+    margin: 50px auto; /* Espaçamento externo e centraliza no eixo horizontal */
+    border-radius: 12px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o conteúdo */
+    max-width: 1200px; /* Limita a largura máxima do bloco */
+}
+
+.partners-container h1 {
+    font-size: 28px; /* Tamanho do título */
+    margin-bottom: 30px; /* Espaço abaixo do título */
+    color: #0653A1; /* Título branco */
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens no eixo horizontal */
+    gap: 30px; /* Espaçamento entre os logos */
+    flex-wrap: wrap; /* Permite que os logos quebrem linha em telas menores */
+}
+
+.partner-logos img {
+    width: 250px; /* Tamanho padrão dos logos */
+    height: 140px; /* Mantém proporção */
+    object-fit: contain; /* Garante que a imagem seja ajustada corretamente */
+    transition: transform 0.3s ease; /* Adiciona animação ao passar o mouse */
+}
+
+.partner-logos img:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente no hover */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .partner-logos img {
+        width: 100px; /* Reduz o tamanho dos logos */
+    }
+
+    .partners-container h1 {
+        font-size: 24px; /* Ajusta o tamanho do título */
+    }
+
+    .partner-logos {
+        gap: 20px; /* Reduz o espaço entre logos */
+    }
+}
+
+.number{
+    color: #FE990D;
+    font-size: 35px;
+
 }

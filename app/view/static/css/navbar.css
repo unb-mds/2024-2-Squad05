@@ -12,6 +12,7 @@ header{
 }
 
 .nav-bar{
+    height: 35px;
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 6rem;
