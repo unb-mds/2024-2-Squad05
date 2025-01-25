@@ -1,0 +1,41 @@
+# This workflow will upload a Python Package to PyPI when a release is created
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Upload CSV to Database
+
+on:
+  push:
+    paths:
+      - 'app/data/csv/*.csv'
+
+jobs:
+  find-latest-csv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install pandas sqlalchemy psycopg2-binary
+
+      - name: Find latest CSV
+        run: |
+          # NOTE: put your own distribution build steps here.
+          import os
+          import glob
+
+          list_of_files = glob.glob('app/data/csv/*.csv')
+          latest_file = max(list_of_files, key=os.path.getctime)
+          print(latest_file)
+
+

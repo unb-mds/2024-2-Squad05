@@ -1,7 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-![Stars](https://img.shields.io/github/stars/unb-mds/2024-2-Squad05)
 [![GitHub contributors](https://img.shields.io/github/contributors/unb-mds/2024-2-Squad05)](https://img.shields.io/github/contributors/unb-mds/2024-2-Squad05)
-![Stars](https://img.shields.io/github/issues/unb-mds/2024-2-Squad05.svg)
 ![]((https://img.shields.io/github/issues/unb-mds/2024-2-Squad05))
 ![](https://img.shields.io/github/issues-closed/unb-mds/2024-2-Squad05.svg)
 

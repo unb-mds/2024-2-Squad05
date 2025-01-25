@@ -10,7 +10,7 @@ Os requisitos funcionais descrevem as funcionalidades específicas que o sistema
 | RF02   | O dashboard deve atualizar os dados diariamente, para garantir a atualização das informações.                                              |
 | RF03   | O dashboard deve conter filtros para personalização de dados e visualização de acordo com suas necessidades, como tempo e sentimento.      |
 | RF04   | O dashboard deve ter elementos gráficos interativos.                                                                                       |
-| RF05   | O sistema deve integrar-se ao Metabase para extrair dados automaticamente.                                                                  |
+| RF05   | O sistema deve integrar-se com a fonte de dados do projeto automaticamente, para extração de dados.                                                                  |
 | RF06   | O sistema deve identificar se os sentimentos relacionados a um tópico são positivos, negativos ou neutros.                                  |
 | RF07   | O sistema deve classificar os dados em categorias predefinidas, como contributivas ou irrelevantes.                                         |
 | RF08   | O sistema deve exibir os resultados da análise de sentimentos em gráficos claros e interativos.                                            |
