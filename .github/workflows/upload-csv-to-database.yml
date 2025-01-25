@@ -21,6 +21,7 @@ jobs:
           pip install pandas
 
       - name: Find latest CSV
+        id: find_csv
         run: |
           import os
           import glob
@@ -31,13 +32,15 @@ jobs:
         shell: python
       
       - name: Diff IDS in CSV
+        env:
+          LATEST_CSV: ${{ steps.find_csv.outputs.latest_csv }}
         run: |
           import pandas as pd
 
           diff_ids_file = '.github/diff_ids_workflow.csv'
 
           df_ids = pd.read_csv(diff_ids_file)
-          df = pd.read_csv(${{ steps.find_csv.outputs.latest_csv }})
+          df = pd.read_csv("${{ env.LATEST_CSV }}")
 
           new_data = df[~df["ID"].isin(df_ids["ID"])]
           print(new_data)
