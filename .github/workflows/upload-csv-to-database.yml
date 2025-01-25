@@ -16,6 +16,10 @@ jobs:
         with:
           python-version: '3.9'
 
+      - name: Install dependencies
+        run: |
+          pip install pandas
+          
       - name: Find latest CSV
         run: |
           import os
@@ -24,6 +28,31 @@ jobs:
           list_of_files = glob.glob('app/data/csv/*.csv')
           print(list_of_files)
           latest_file = max(list_of_files, key=os.path.getctime)
-          print(latest_file)
+        shell: python
+      
+      - name: Diff IDS in CSV
+        run: |
+          import pandas as pd
+
+          diff_ids_file = '.github/diff_ids_workflow.csv'
+
+          df_ids = pd.read_csv(diff_ids_file)
+          df = pd.read_csv(latest_file)
+
+          new_data = df[~df["ID"].isin(df_ids["ID"])]
+          print(new_data)
         shell: python
 
+      - name: Create new Diff ID CSV
+        run: |
+          import pandas as pd
+
+          id_only = df[["ID"]]
+          id_only.to_csv(diff_ids_file, index=False)
+        shell: python
+
+      - name: Commit new ID file
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'Add new IDs to diff file'
+          branch: main
