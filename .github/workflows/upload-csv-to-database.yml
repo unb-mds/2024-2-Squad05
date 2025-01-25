@@ -23,6 +23,7 @@ jobs:
 
           list_of_files = glob.glob('app/data/csv/*.csv')
           latest_file = max(list_of_files, key=os.path.getctime)
+          print(os.path.getctime)
           print(latest_file)
         shell: python
 
