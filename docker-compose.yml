@@ -4,7 +4,7 @@ services:
     container_name: lumina-web
     build: .
     ports:
-      - "8000:8000"
+      - "8110:8110"
     volumes:
       - .:/app
     environment:
@@ -12,7 +12,7 @@ services:
     depends_on:
       - migration
       - db
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8110
 
   # Migration
   migration:
@@ -37,7 +37,7 @@ services:
     volumes:
       - lumina_db_data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5435:5435"
 
 volumes:
   lumina_db_data:
