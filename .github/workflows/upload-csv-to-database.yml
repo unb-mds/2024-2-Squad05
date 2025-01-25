@@ -19,15 +19,15 @@ jobs:
       - name: Install dependencies
         run: |
           pip install pandas
-          
+
       - name: Find latest CSV
         run: |
           import os
           import glob
 
           list_of_files = glob.glob('app/data/csv/*.csv')
-          print(list_of_files)
           latest_file = max(list_of_files, key=os.path.getctime)
+          print(f"::set-output name=latest_csv::{latest_file}")
         shell: python
       
       - name: Diff IDS in CSV
@@ -37,15 +37,10 @@ jobs:
           diff_ids_file = '.github/diff_ids_workflow.csv'
 
           df_ids = pd.read_csv(diff_ids_file)
-          df = pd.read_csv(latest_file)
+          df = pd.read_csv(${{ steps.find_csv.outputs.latest_csv }})
 
           new_data = df[~df["ID"].isin(df_ids["ID"])]
           print(new_data)
-        shell: python
-
-      - name: Create new Diff ID CSV
-        run: |
-          import pandas as pd
 
           id_only = df[["ID"]]
           id_only.to_csv(diff_ids_file, index=False)
