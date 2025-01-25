@@ -22,7 +22,8 @@ jobs:
           import glob
 
           list_of_files = glob.glob('app/data/csv/*.csv')
-          latest_file = min(list_of_files, key=os.path.getctime)
+          print(list_of_files)
+          latest_file = max(list_of_files, key=os.path.getctime)
           print(latest_file)
         shell: python
 
