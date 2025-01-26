@@ -1,6 +1,6 @@
 class Navbar extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `
+  connectedCallback() {
+    this.innerHTML = `
         <header>
             <nav class="nav-bar">
                 <div class="logo">
@@ -28,7 +28,7 @@ class Navbar extends HTMLElement {
                 </ul>
             </div>
         </header>`;
-    }
+  }
 }
 
-customElements.define('custom-navbar', Navbar);
+customElements.define("custom-navbar", Navbar);

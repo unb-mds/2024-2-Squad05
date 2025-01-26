@@ -1,7 +1,5 @@
 from django.db import models
 
-from django.db import models
-
 class Proposta(models.Model):
     id = models.BigAutoField(primary_key=True)
     component_id = models.IntegerField()

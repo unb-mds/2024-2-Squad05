@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Apps criados
     'apps.core',
     'apps.analysis',
+    'apps.view',
 ]
 
 MIDDLEWARE = [
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'lumina.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'view' / 'templates'],
+        'DIRS': [BASE_DIR / 'apps' / 'view' / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,12 +84,12 @@ WSGI_APPLICATION = 'lumina.wsgi.application'
 #   mantenha localhost para desenvolvimento local e db para o Docker.
 DATABASES = {
      'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'lumina_db',
-        'USER': 'lumina_user',
-        'PASSWORD' : 'lumina_password',
-        'HOST': 'db',
-        'PORT': '5432'
+        'ENGINE'    : 'django.db.backends.postgresql_psycopg2',
+        'NAME'      : 'lumina_db',
+        'USER'      : 'lumina_user',
+        'PASSWORD'  : 'lumina_password',
+        'HOST'      : 'db',
+        'PORT'      : '5432'
     }
 }
 
@@ -127,8 +128,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'view' / 'static']
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [BASE_DIR / 'apps' / 'view' / 'static']
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 

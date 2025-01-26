@@ -24,7 +24,7 @@ services:
       - DEBUG= True
     depends_on:
       - db
-    command: [ "bash", "-c", "./wait-for-it.sh lumina-db:5432 -- python manage.py makemigrations && python manage.py migrate" ]
+    command: [ "bash", "-c", "./wait-for-it.sh db:5432 -- python manage.py makemigrations && python manage.py migrate" ]
   # Database
   db:
     image: postgres:latest
