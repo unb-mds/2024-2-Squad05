@@ -11,7 +11,7 @@ class Navbar extends HTMLElement {
                     <ul>
                         <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
                         <li class="nav-item"><a href="#" class="nav-link">Tópicos</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Sobre Nós</a></li>
+                        <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">Sobre Nós</a></li>
                     </ul>
                 </div>
     
@@ -24,7 +24,7 @@ class Navbar extends HTMLElement {
                 <ul>
                     <li class="nav-item"><a href="#" class="nav-link">Início</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Tópicos</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Sobre Nós</a></li>
+                    <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">Sobre Nós</a></li>
                 </ul>
             </div>
         </header>`;
