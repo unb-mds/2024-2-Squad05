@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+    <!-- Importa os scripts -->
+    {% load static %}
+    <script src="{% static 'js/componentsNavbar.js' %}" defer></script>
+    <script src="{% static 'js/componentsFooter.js' %}" defer></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <custom-navbar></custom-navbar>
+
+    <!-- Conteúdo principal -->
+    <main>
+      <h1>Conteúdo da Página</h1>
+      <p>O navbar e o footer foram reutilizados de forma dinâmica!</p>
+    </main>
+
+    <!-- Footer -->
+    <custom-footer></custom-footer>
+  </body>
+</html>
