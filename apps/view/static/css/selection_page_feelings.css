@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+main {
+    margin: 20px auto; 
+    padding: 10px;
+    max-width: 1000px;
+}
+
+.title {
+    font-size: 80px;
+    color: #F25907;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300; /* Define a espessura fina */
+    margin-bottom: 10px;
+}
+
+
+.subtitle {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #F25907;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.selection-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide os botões em 2 colunas */
+    gap: 40px; /* Ajusta o espaçamento entre os botões */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.button {
+    background-color: #FE990D4D;
+    width: 665px;
+    height: 252px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #0653A1;
+    border: none;
+    font-weight: bold;
+    color: #0653A1;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+
+}
+
+.button img {
+    width: 130px;
+    height: 120px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+
+}
+
+/* Oculta a descrição por padrão */
+.button .description {
+    display: none;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: justify;
+    color: #333;
+    margin-top: 10px;
+    padding: 0 15px;
+}
+
+/* Quando o botão estiver expandido */
+.button.expanded {
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    padding: 20px;
+}
+
+.button.expanded img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+.button.expanded span {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: auto;
+}
+
+.button.expanded .description {
+    display: block;
+    flex: 1;
+}
+
+.button:hover .description {
+    display: block; /* Exibe quando o mouse passar */
+}
