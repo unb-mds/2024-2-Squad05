@@ -36,3 +36,6 @@ def analysis(request):
 
     # If the request is not POST, render the index.html template
     return render(request, "analysis.html")
+
+def about(request):
+    return render(request, 'aboutus.html')
