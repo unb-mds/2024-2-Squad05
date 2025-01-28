@@ -12,7 +12,7 @@ class Proposta(models.Model):
     comments_count = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.title.get("pt-BR", "Título não definido")
+        return self.title
 
 
 class Comentario(models.Model):
