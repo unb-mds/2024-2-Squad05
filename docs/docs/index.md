@@ -1,8 +1,8 @@
-# Análise de Sentimentos e Tópicos Recorrentes do Brasil Participativo
+# Análise de Sentimentos e Tendências Governamentais do Brasil Participativo
 
 ## Sobre o Projeto
 
-Bem-vindo ao repositório do Squad 5 de Métodos e Desenvolvimento de Software – Análise de Sentimento e Tópicos Recorrentes do Brasil Participativo!
+Bem-vindo ao repositório do Squad 5 de Métodos e Desenvolvimento de Software – Análise de Sentimento e Tendências Governamentais do Brasil Participativo!
 
 Aqui você encontrará toda a documentação, código e informações relevantes sobre o desenvolvimento deste projeto. O projeto foi concebido para atender à necessidade de uma visão aprofundada sobre as opiniões e percepções populares expressas na plataforma Brasil Participativo. A partir de comentários e discussões na plataforma, buscamos identificar as principais emoções e temas discutidos pela população, oferecendo uma visão panorâmica e detalhada das tendências de opinião pública.
 

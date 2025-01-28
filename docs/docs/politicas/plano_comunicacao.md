@@ -42,5 +42,5 @@ Tabela de Versionamento
 | Versão | Data       | Descrição                                                     | Autor(es)        |
 |--------|------------|---------------------------------------------------------------|------------------|
 | 1.0    | 09/12/2024 | Criação inicial                       | LARYSSA FELIX |
-| 2.0    | 11/12/2024 | Correções e aprimoramento             | LARYSSA FELIX |
+| 1.1    | 11/12/2024 | Correções e aprimoramento             | LARYSSA FELIX |
                                              

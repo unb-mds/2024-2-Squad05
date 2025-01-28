@@ -23,6 +23,7 @@ O projeto é conduzido por estudantes como parte da disciplina **Métodos de Des
 ## Responsabilidades  
 
 Os mantenedores do projeto são responsáveis por:  
+
 - Definir e esclarecer os padrões de conduta esperados.  
 - Tomar medidas justas e corretivas em casos de comportamentos inadequados.  
 - Editar, remover ou rejeitar comentários, confirmações, código ou outras contribuições que violem este Código de Conduta.  
@@ -32,7 +33,8 @@ Os mantenedores do projeto são responsáveis por:
 ## Escopo  
 
 Este Código de Conduta se aplica:  
-- A todas as interações realizadas no âmbito do projeto
+
+- A todas as interações realizadas no âmbito do projeto.
 - A situações públicas onde um indivíduo represente o projeto ou sua comunidade (ex.: uso de e-mail oficial ou participação em eventos como representante do projeto).  
 
 ---
@@ -42,4 +44,4 @@ Tabela de Versionamento
 | Versão | Data       | Descrição                                                     | Autor(es)        |
 |--------|------------|---------------------------------------------------------------|------------------|
 | 1.0    | 09/12/2024 | Criação inicial                       | LARYSSA FELIX |
-| 2.0    | 11/12/2024 | Crorreções                       | LARYSSA FELIX |
+| 1.1    | 11/12/2024 | Correções                       | LARYSSA FELIX |
