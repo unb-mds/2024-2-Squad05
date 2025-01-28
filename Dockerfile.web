@@ -16,5 +16,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY front/ ./
 COPY src/ ./
 
+COPY --chmod=755 docker-entrypoint.sh /docker-entrypoint.sh
+# RUN chmod +x /app/docker-entrypoint.sh
+
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
 # Expor a porta padrão do Django
-EXPOSE 8000
+# EXPOSE 8000
+

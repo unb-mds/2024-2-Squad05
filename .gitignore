@@ -381,3 +381,6 @@ pyrightconfig.json
 /.idea/vcs.xml
 /.idea/.gitignore
 /.idea
+
+#VSCODE
+.vscode
