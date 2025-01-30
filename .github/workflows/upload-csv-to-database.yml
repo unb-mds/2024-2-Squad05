@@ -1,0 +1,56 @@
+name: Upload CSV to Database
+
+on:
+  push:
+    paths:
+      - 'data/*.csv'
+
+jobs:
+  find-latest-csv:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install pandas
+
+      - name: Find latest CSV
+        id: find_csv
+        run: |
+          import os
+          import glob
+
+          list_of_files = glob.glob('data/*.csv')
+          latest_file = max(list_of_files, key=os.path.getctime)
+          print(f"::set-output name=latest_csv::{latest_file}")
+        shell: python
+      
+      - name: Diff IDS in CSV
+        env:
+          LATEST_CSV: ${{ steps.find_csv.outputs.latest_csv }}
+        run: |
+          import pandas as pd
+
+          diff_ids_file = '.github/diff_ids_workflow.csv'
+
+          df_ids = pd.read_csv(diff_ids_file)
+          df = pd.read_csv("${{ env.LATEST_CSV }}")
+
+          new_data = df[~df["ID"].isin(df_ids["ID"])]
+          print(new_data)
+
+          id_only = df[["ID"]]
+          id_only.to_csv(diff_ids_file, index=False)
+        shell: python
+
+      - name: Commit new ID file
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'Add new IDs to diff file'
+          branch: main

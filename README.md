@@ -1,27 +1,31 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-![Stars](https://img.shields.io/github/stars/unb-mds/2024-2-Squad05)
 [![GitHub contributors](https://img.shields.io/github/contributors/unb-mds/2024-2-Squad05)](https://img.shields.io/github/contributors/unb-mds/2024-2-Squad05)
-![Stars](https://img.shields.io/github/issues/unb-mds/2024-2-Squad05.svg)
 ![]((https://img.shields.io/github/issues/unb-mds/2024-2-Squad05))
 ![](https://img.shields.io/github/issues-closed/unb-mds/2024-2-Squad05.svg)
-## Análise de Sentimento e Tendências Governamentais - Squad 05
+
+## Lumina Análise de Sentimentos - 2024.2 - Squad 05
 
 ## 🔎 Sobre o Projeto: 
-O projeto Análise de Sentimento e Tendências Governamentais foi criado para responder à crescente demanda por uma compreensão mais profunda das percepções populares sobre políticas e ações governamentais. Nossa missão é fornecer um panorama acessível e transparente das tendências de opinião pública, facilitando o acesso a informações confiáveis para cidadãos, pesquisadores e formuladores de políticas. Acreditamos que, ao oferecer uma análise clara dos sentimentos da sociedade, contribuímos para uma gestão pública mais inclusiva, responsável e conectada com as reais necessidades da população.
-## 💻 Tecnologias 
-- 🎨 **Prototipação:**  
-- 📋 **Linguagens:** 
-- 🖼️ **Framework Web:**
-## 🗃️ Documentação
-Para acessar a página web da nossa documentação [Clique aqui]()
-### 📲 Instalação
-### ⚙️ Execução
-### Pré-Requisitos
-### Como Rodar o projeto
-> Clone o Repositório do projeto
-```bash
-git clone https://github.com/unb-mds/2024-2-Squad05.git
-```
+
+O **Projeto Lumina** tem como objetivo principal realizar a **Análise de Sentimentos** dos **Planos Participativos** disponibilizados pela maior plataforma de contribuição social do governo federal: o **Brasil Participativo**. 
+
+## Objetivo Geral
+Oferecer uma compreensão clara e acessível das percepções populares sobre as propostas enviadas pela sociedade, utilizando análise de sentimentos para identificar opiniões positivas, negativas e neutras.
+
+## Objetivos Específicos
+- Responder à crescente demanda por uma compreensão mais profunda das necessidades da população em áreas como **Sustentabilidade**, **Cultura** e **Direitos Humanos**.
+- Fornecer dados que possam guiar as ações do governo federal, promovendo políticas públicas mais alinhadas com as demandas sociais.
+- Facilitar o acesso a informações confiáveis e transparentes para cidadãos, pesquisadores e formuladores de políticas.
+
+## Justificativa
+
+O **Projeto Lumina** surge como uma resposta à necessidade crescente de compreender as percepções populares sobre políticas públicas e prioridades sociais. A plataforma **Brasil Participativo**, sendo a maior ferramenta de contribuição cidadã do governo federal, reúne um volume significativo de dados e comentários que expressam as demandas, opiniões e sentimentos da sociedade em relação a propostas de diversas áreas.
+
+Embora os dados sejam ricos em informações, sua complexidade e volume dificultam a análise e a utilização eficiente por gestores, pesquisadores e cidadãos. Nesse contexto, a aplicação de **Análise de Sentimentos** se torna essencial, permitindo extrair insights valiosos de forma estruturada e acessível. 
+
+Ao disponibilizar resultados claros e confiáveis, o Projeto Lumina não apenas facilita a tomada de decisões informadas, mas também promove a **transparência** e o **engajamento social**, contribuindo para uma gestão pública mais alinhada com as necessidades reais da população. Assim, o projeto reforça a importância de dados como base para uma governança participativa, inclusiva e responsável.
+
+
 ## 👥 Desenvolvedores
 <center>
 <table style="margin-left: auto; margin-right: auto;">
@@ -65,3 +69,21 @@ git clone https://github.com/unb-mds/2024-2-Squad05.git
         </td>
 </table>
 </center>
+
+## 💻 Frameworks
+- 📋 **Backlog do projeto:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/documentation/productbacklog/)
+- 🎨 **Prototipação:**  [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/prototipo/prototipo/)
+- 🏛️ **Arquitetura:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/architecture/architecture/)
+- 🌳 **Configuração do Ambiente:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/configuracao/configuracao/)
+- 🙋 **Como contribuir:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/politicas/contribuicao/)
+
+## 🗃️ Documentação
+Para acessar a página web da nossa documentação [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/)
+
+### 📲 Demais configurações
+- 📋 **Pré-requisitos:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/configuracao/configuracao/#pre-requisitos)
+- 💻 **Ambiente:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/configuracao/configuracao/#ambiente-local)
+- ⚙️ **Configuração e Execução:** [Clique aqui](https://unb-mds.github.io/2024-2-Squad05/configuracao/configuracao/#configuracao-e-execucao)
+
+---
+Lumina é um software livre, disponível sob a licença MIT.

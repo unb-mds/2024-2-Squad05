@@ -150,7 +150,7 @@ Embora seja uma funcionalidade relevante e que trará valor ao produto, sua impl
 
 <div align="justify">As Features descritas na tabela acima foram organizadas em um board visual, que facilita o planejamento e execução do projeto ao oferecer uma visualização clara das tarefas, permitindo colaboração em tempo real, flexibilidade para reordenar prioridades e transparência no acompanhamento por meio do registro de comentários e histórico de mudanças. Isso garante maior alinhamento e eficiência entre os membros da equipe.</div>
 
-<iframe width="768" height="432" src="https://miro.com/app/embed/uXjVL4gxdzE=/?pres=1&frameId=3458764610203412810&embedId=995753762657" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
+<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVL4gxdzE=/?moveToViewport=-2767,-1368,6243,2550&embedId=396833406474" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 
 ---
 
