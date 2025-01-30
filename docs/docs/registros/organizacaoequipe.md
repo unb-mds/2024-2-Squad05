@@ -10,14 +10,14 @@
         </td>
         <td align="center">
             <a href="https://github.com/CaioPacheco">
-                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/90219652?v=4" width="150px;"/>
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/90219652?v=4" width="160px;"/>
                 <h5 class="text-center">Caio Pacheco</h5>
             </a>
             <p>Função: Arquiteto de Software/ Dados</p>
         </td>
         <td align="center">
             <a href="https://github.com/GabrielSPinto">
-                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/144184007?v=4" width="150px;"/>
+                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/144184007?v=4" width="100px;"/>
                 <h5 class="text-center">Gabriel Santos</h5>
             </a>
             <p>Função: Product Owner (PO)/ Desenvolvedor</p>
