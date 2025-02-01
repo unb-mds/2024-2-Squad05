@@ -39,3 +39,6 @@ def analysis(request):
     
 def selection(request):
     return render(request, "selection_page_feelings.html")
+    
+def about(request):
+    return render(request, 'aboutus.html')
