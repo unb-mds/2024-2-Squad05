@@ -4,27 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seleção de Sentimentos</title>
-    <link rel="stylesheet" href="../static/css/selection_page_feelings.css">
-    <!-- <link rel="stylesheet" href="../static/css/navbar.css">
-    <link rel="stylesheet" href="../static/css/footer.css">
-    Importa os scripts
-    <script src="../js/componentsNavbar.js" defer></script>
-    <script src="../js/componentsFooter.js" defer></script> -->
+    
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/selection_page_feelings.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+
+    <!-- Importa os scripts -->
+    <script src="{% static 'js/componentsNavbar.js' %}" defer></script>
+    <script src="{% static 'js/componentsFooter.js' %}" defer></script>
+  </head>
+    
+
 </head>
 <body>
-    <!-- <header>
-        <div class="logo">Lumina</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Análise</a></li>
-                <li><a href="#">Tópicos</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-            </ul>
-        </nav>
-    </header> -->
     <custom-navbar></custom-navbar>
-
+    
     <main>
         <h1 class="title">Análise de Sentimentos</h1>
         <h2 class="subtitle">Planos Participativos</h2>
@@ -52,12 +48,7 @@
         </div>
         
     </main>
-    <!-- <footer>
-        <p>&copy; 2024 Lumina. Todos os direitos reservados.</p>
-    </footer> -->
- 
-    <!-- Footer
-    <custom-footer></custom-footer> -->
+    
     <script>
         document.querySelectorAll('.button').forEach(button => {
             button.addEventListener('mouseenter', () => {
@@ -80,6 +71,6 @@
         });
 
     </script>
-    
+        <custom-footer></custom-footer>
 </body>
 </html>
