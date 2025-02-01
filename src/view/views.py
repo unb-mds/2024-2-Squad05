@@ -42,3 +42,6 @@ def selection(request):
     
 def about(request):
     return render(request, 'aboutus.html')
+
+def topics(request):
+    return render(request, 'selection_topics.html')
