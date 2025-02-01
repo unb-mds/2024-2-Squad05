@@ -11,15 +11,13 @@
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
 
-    <!-- Importa os scripts -->
-    <script src="{% static 'js/componentsNavbar.js' %}" defer></script>
-    <script src="{% static 'js/componentsFooter.js' %}" defer></script>
+   
   </head>
     
 
 </head>
 <body>
-    <custom-navbar></custom-navbar>
+    {% include 'components/navbar.html' %}
     
     <main>
         <h1 class="title">Análise de Sentimentos</h1>

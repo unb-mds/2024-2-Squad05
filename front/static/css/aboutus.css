@@ -1,0 +1,82 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Frase grande no topo */
+.frase-grande h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Texto explicativo */
+.texto-explicativo {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Estilo dos membros da equipe */
+.equipe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Membros à esquerda */
+.membro:nth-child(1),
+.membro:nth-child(2),
+.membro:nth-child(3) {
+    width: calc(50% - 10px); /* Divide o espaço em 2 colunas */
+    margin-right: auto; /* Alinha à esquerda */
+}
+
+/* Membros à direita */
+.membro:nth-child(4),
+.membro:nth-child(5),
+.membro:nth-child(6) {
+    width: calc(50% - 10px); /* Divide o espaço em 2 colunas */
+    margin-left: auto; /* Alinha à direita */
+}
+
+.membro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.membro img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.texto-membro {
+    flex: 1;
+}
+
+.texto-membro p {
+    margin: 5px 0;
+}
+
+.texto-membro strong {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}

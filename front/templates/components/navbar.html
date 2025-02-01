@@ -2,8 +2,8 @@
 
 <header>
   <nav class="nav-bar">
-    <div class="logo">
-      <h1>Logo</h1>
+    <div>
+      <img class="logo" src="{% static 'imgs/Logo.png' %}">
     </div>
 
     <div class="nav-list">
@@ -15,7 +15,7 @@
           <a href="{% url 'topics' %}" class="nav-link">Tópicos</a>
         </li>
         <li class="nav-item">
-          <a href="{% url 'analysis' %}" class="nav-link">Análise</a>
+          <a href="{% url 'selection' %}" class="nav-link">Análise</a>
         </li>
         <li class="nav-item">
           <a href="{% url 'about' %}" class="nav-link">Sobre Nós</a>
