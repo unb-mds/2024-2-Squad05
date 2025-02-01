@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Seleção de Sentimentos</title>
     <link rel="stylesheet" href="../static/css/selection_page_feelings.css">
-    <!-- <link rel="stylesheet" href="../static/css/navbar.css">
-    <link rel="stylesheet" href="../static/css/footer.css">
-    Importa os scripts
-    <script src="../js/componentsNavbar.js" defer></script>
-    <script src="../js/componentsFooter.js" defer></script> -->
+    <link rel="stylesheet" href="{% static 'static/css/selection_page_feelings.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+
+    <!-- Importa os scripts -->
+    <script src="{% static 'js/componentsNavbar.js' %}" ></script>
+    <script src="{% static 'js/componentsFooter.js' %}" ></script>
 </head>
 <body>
     <!-- <header>
@@ -26,8 +29,11 @@
     <custom-navbar></custom-navbar>
 
     <main>
-        <h1 class="title">Análise de Sentimentos</h1>
-        <h2 class="subtitle">Planos Participativos</h2>
+        <div class="container_text">
+            <h1 class="title">Análise de Sentimentos</h1>
+            <h2 class="subtitle">Planos Participativos</h2>
+        </div>
+
         <div class="selection-buttons">
             <div class="button" onclick="expandButton(this)">
                 <img src="../static/imgs/plano_clima.png" alt="Plano Clima">

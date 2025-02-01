@@ -10,6 +10,18 @@ main {
     margin: 20px auto; 
     padding: 10px;
     max-width: 1000px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.container_text {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .title {
@@ -17,7 +29,7 @@ main {
     color: #F25907;
     font-style: italic;
     font-family: 'Poppins', sans-serif;
-    font-weight: 300; /* Define a espessura fina */
+    font-weight: 300; 
     margin-bottom: 10px;
 }
 
@@ -32,8 +44,8 @@ main {
 
 .selection-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Divide os botões em 2 colunas */
-    gap: 40px; /* Ajusta o espaçamento entre os botões */
+    grid-template-columns: 1fr 1fr; 
+    gap: 40px; 
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -110,3 +122,50 @@ main {
 .button:hover .description {
     display: block; /* Exibe quando o mouse passar */
 }
+
+@media (max-width:1000px){
+    .title {
+        font-size: 40px;
+    }
+    .subtitle {
+        font-size: 25px;
+    }
+}
+
+@media (max-width:800px){
+    .main {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .selection-buttons {
+        grid-template-columns: 1fr; /* Faz com que os botões fiquem em uma única coluna */
+        gap: 20px; /* Ajuste para melhor espaçamento */
+        padding: 10px;
+    }
+
+    .button {
+        width: 90%; /* Ajusta a largura para se adaptar melhor à tela */
+        height: auto; /* Deixa a altura flexível */
+        padding: 20px;
+    }
+
+    .button img {
+        width: 100px;
+        height: 90px;
+    }
+}
+
+@media (max-width:1300px) {
+    .selection-buttons{
+        width: 80%;
+    }
+
+}
+
+/* @media (max-width:1300px) {
+    .button {
+        width: 465px;
+        height: 152px;
+    }
+} */
