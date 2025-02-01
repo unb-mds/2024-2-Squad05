@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     {% load static %}
-    <link rel="stylesheet" href="../static/css/selection_topics.css">
-    <link rel="stylesheet" href="../static/css/navbar.css">
-    <link rel="stylesheet" href="../static/css/footer.css">
-    <link rel="stylesheet" href="../static/css/home.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/selection_topics.css" />
+    <link rel="stylesheet" href="../static/css/navbar.css" />
+    <link rel="stylesheet" href="../static/css/footer.css" />
+    <link rel="stylesheet" href="../static/css/home.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Importa os scripts -->
     <script src="../js/componentsNavbar.js" defer></script>
     <script src="../js/componentsFooter.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar -->
-    <custom-navbar></custom-navbar>
+    {% include 'components/navbar.html' %}
 
     <!-- Conteúdo principal -->
-    <main style="text-align: center; margin-top: 100px;">
-        <h1 class="main-title">Tópicos Recorrentes</h1>
-        <h2 class="sub-title">Setores Sociais</h2>
-        <div class="icon-grid">
-            <div class="icon-card">
-                <i class="bi bi-lungs" style="font-size: 3rem;"></i>
-                <p>Saúde</p>
-            </div>
-            <div class="icon-card">
-                <i class="bi bi-book" style="font-size: 3rem;"></i>
-                <p>Educação</p>
-            </div>
-            <div class="icon-card">
-                <i class="bi bi-shield-lock" style="font-size: 3rem;"></i>
-                <p>Segurança</p>
-            </div>
-            <div class="icon-card">
-                <i class="bi bi-tree" style="font-size: 3rem;"></i>
-                <p>Meio Ambiente</p>
-            </div>
+    <main style="text-align: center; margin-top: 100px">
+      <h1 class="main-title">Tópicos Recorrentes</h1>
+      <h2 class="sub-title">Setores Sociais</h2>
+      <div class="icon-grid">
+        <div class="icon-card">
+          <i class="bi bi-lungs" style="font-size: 3rem"></i>
+          <p>Saúde</p>
         </div>
-    </main>    
+        <div class="icon-card">
+          <i class="bi bi-book" style="font-size: 3rem"></i>
+          <p>Educação</p>
+        </div>
+        <div class="icon-card">
+          <i class="bi bi-shield-lock" style="font-size: 3rem"></i>
+          <p>Segurança</p>
+        </div>
+        <div class="icon-card">
+          <i class="bi bi-tree" style="font-size: 3rem"></i>
+          <p>Meio Ambiente</p>
+        </div>
+      </div>
+    </main>
 
     <!-- Footer -->
-    <custom-footer></custom-footer>
-</body>
+    {% include 'components/footer.html' %}
+  </body>
 </html>
