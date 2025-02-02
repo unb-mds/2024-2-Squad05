@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Seleção de Sentimentos</title>
-    <link rel="stylesheet" href="../static/css/selection_page_feelings.css">
-    <link rel="stylesheet" href="{% static 'static/css/selection_page_feelings.css' %}" />
+    
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/selection_page_feelings.css' %}" />
     <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
     <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
-
-    <!-- Importa os scripts -->
-    <script src="{% static 'js/componentsNavbar.js' %}" ></script>
-    <script src="{% static 'js/componentsFooter.js' %}" ></script>
 </head>
+
 <body>
-    <custom-navbar></custom-navbar>
-
+    {% include 'components/navbar.html' %}
+    
     <main>
-        <div class="container_text">
-            <h1 class="title">Análise de Sentimentos</h1>
-            <h2 class="subtitle">Planos Participativos</h2>
-        </div>
-
+        <h1 class="title">Análise de Sentimentos</h1>
+        <h2 class="subtitle">Planos Participativos</h2>
         <div class="selection-buttons">
             <div class="button" onclick="expandButton(this)">
                 <img src="../static/imgs/plano_clima.png" alt="Plano Clima">
@@ -47,12 +42,7 @@
         </div>
         
     </main>
-    <!-- <footer>
-        <p>&copy; 2024 Lumina. Todos os direitos reservados.</p>
-    </footer> -->
- 
-    <!-- Footer
-    <custom-footer></custom-footer> -->
+    
     <script>
         document.querySelectorAll('.button').forEach(button => {
             button.addEventListener('mouseenter', () => {
@@ -75,6 +65,6 @@
         });
 
     </script>
-    
+        <custom-footer></custom-footer>
 </body>
 </html>
