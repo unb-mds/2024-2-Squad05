@@ -22,21 +22,21 @@ main {
 }
 
 .title {
-    font-size: 80px;
+    font-size: 60px;
     color: #F25907;
     font-style: italic;
     font-family: 'Poppins', sans-serif;
     font-weight: 300; 
-    margin-bottom: 10px;
+    margin-bottom: 1px; 
 }
 
 
 .subtitle {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 20px;
     color: #F25907;
     font-weight: bold;
-    margin-top: 5px;
+    margin-top: 1px; 
 }
 
 .selection-buttons {
@@ -50,7 +50,7 @@ main {
 
 .button {
     background-color: #FE990D4D;
-    width: 500px;
+    width: 550px;
     height: 210px;
     border-radius: 30px;
     display: flex;
