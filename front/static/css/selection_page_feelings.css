@@ -9,10 +9,7 @@ body {
 main {
     margin: 20px auto; 
     padding: 10px;
-    max-width: 1000px;
-    align-items: center;
-    justify-content: center;
-    
+    max-width: 1200px;
 }
 
 .container_text {
@@ -53,8 +50,8 @@ main {
 
 .button {
     background-color: #FE990D4D;
-    width: 665px;
-    height: 252px;
+    width: 500px;
+    height: 210px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -74,14 +71,13 @@ main {
 }
 
 .button img {
-    width: 130px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin-bottom: 15px;
     transition: all 0.3s ease;
 
 }
 
-/* Oculta a descrição por padrão */
 .button .description {
     display: none;
     font-size: 18px;
@@ -102,9 +98,9 @@ main {
 }
 
 .button.expanded img {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    /* margin-right: 20px; */
     margin-bottom: 0;
 }
 
@@ -120,7 +116,7 @@ main {
 }
 
 .button:hover .description {
-    display: block; /* Exibe quando o mouse passar */
+    display: block; 
 }
 
 @media (max-width:1000px){
@@ -132,21 +128,21 @@ main {
     }
 }
 
-@media (max-width:800px){
+@media (max-width:1000px){
     .main {
         text-align: center;
         align-items: center;
         justify-content: center;
     }
     .selection-buttons {
-        grid-template-columns: 1fr; /* Faz com que os botões fiquem em uma única coluna */
-        gap: 20px; /* Ajuste para melhor espaçamento */
+        grid-template-columns: 1fr; 
+        gap: 20px; 
         padding: 10px;
     }
 
     .button {
-        width: 90%; /* Ajusta a largura para se adaptar melhor à tela */
-        height: auto; /* Deixa a altura flexível */
+        width:auto;
+        height: auto; 
         padding: 20px;
     }
 
@@ -156,12 +152,12 @@ main {
     }
 }
 
-@media (max-width:1300px) {
+/* @media (max-width:1300px) {
     .selection-buttons{
         width: 80%;
     }
 
-}
+} */
 
 /* @media (max-width:1300px) {
     .button {
