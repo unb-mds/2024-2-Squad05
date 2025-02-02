@@ -12,7 +12,7 @@ header{
 }
 
 .nav-bar{
-    height: 60px;
+    height: 40px;
     display: flex;
     justify-content: space-between; /* Mantém os elementos separados */
     align-items: center;
