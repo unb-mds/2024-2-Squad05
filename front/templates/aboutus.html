@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/aboutus.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}" />
+
+   
+  </head>
+    
+
+</head>
+<body>
+    {% include 'components/navbar.html' %}
+
+    <div class="container">
+     
+        <div class="frase-grande">
+            <h1>A informação é a arma mais poderosa para combater a ignorância e construir uma sociedade mais justa.</h1>
+        </div>
+
+       
+        <div class="texto-explicativo">
+            <p>Este site foi desenvolvido como parte do trabalho da disciplina Métodos em Desenvolvimento de Software, ministrada pela professora Carla no Campus UnB Gama, da Faculdade de Ciências e Tecnologias em Engenharia, durante o semestre 2024.2.
+
+                O Projeto Lumina tem como objetivo realizar a Análise de Sentimentos dos Planos Participativos do Brasil Participativo. Por meio dessa análise, identificamos opiniões positivas, negativas e neutras sobre as propostas enviadas pela sociedade. Nosso propósito é contribuir para a criação de políticas públicas mais alinhadas com as demandas sociais, promovendo uma gestão pública mais eficiente e próxima das necessidades reais da população.</p>
+        </div>
+
+       
+        <div class="equipe">
+            
+            <div class="membro">
+                <img src="{% static 'imgs/membros/Arthur.png' %}"  alt="Membro 1">
+                <div class="texto-membro">
+                    <p><strong> Arthur Fernandes </strong></p>
+                    <p>Breve descrição sobre o membro 1 e seu papel na equipe.</p>
+                </div>
+            </div>
+
+            <!-- Membro 2 -->
+            <div class="membro">
+                <img src="{% static 'imgs/membros/Gabs.png' %}"  alt="Membro 2">
+                <div class="texto-membro">
+                    <p><strong>Nome do Membro 2</strong></p>
+                    <p>Breve descrição sobre o membro 2 e seu papel na equipe.</p>
+                </div>
+            </div>
+
+            <!-- Membro 3 -->
+            <div class="membro">
+                <img src= "{% static 'imgs/membros/Gabs.png' %}"  alt="Membro 3">
+                <div class="texto-membro">
+                    <p><strong> Gabriel Pinto</strong></p>
+                    <p>Breve descrição sobre o membro 3 e seu papel na equipe.</p>
+                </div>
+            </div>
+
+
+            <!-- Membro 5 -->
+            <div class="membro">
+                <img src= "{% static 'imgs/membros/Lary.png' %}"   alt="Membro 5">
+                <div class="texto-membro">
+                    <p><strong> Laryssa Felix </strong></p>
+                    <p>Breve descrição sobre o membro 5 e seu papel na equipe.</p>
+                </div>
+            </div>
+
+
+            <!-- Membro 4 -->
+            <div class="membro">
+                <img src="{% static 'imgs/membros/leticia.jpeg' %}"   alt="Membro 4">
+                <div class="texto-membro">
+                    <p><strong>Letícia Monteiro</strong></p>
+                    <p>Breve descrição sobre o membro 4 e seu papel na equipe.</p>
+                </div>
+            </div>
+
+            <!-- Membro 6 -->
+            <div class="membro">
+                <img src="{% static 'imgs/membros/Luiz.png' %}"  alt="Membro 6">
+                <div class="texto-membro">
+                    <p><strong>Luiz Henrique Soares</strong></p>
+                    <p>Breve descrição sobre o membro 6 e seu papel na equipe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<main> 
+
+</main>
+
+<!-- Footer -->
+{% include 'components/footer.html' %}
+</body>
+</html>

@@ -18,8 +18,8 @@ header{
     padding: 1.5rem 6rem;
 }
 
-.logo h1{
-    color: white;
+.logo{
+    margin-top: 0px;
 }
 
 .nav-list{
