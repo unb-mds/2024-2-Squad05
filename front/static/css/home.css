@@ -14,8 +14,8 @@ p {
 
 p.center-text {
     text-align: center;
-    margin-top: 20px; /* Adiciona um espaçamento acima do parágrafo */
-    margin-bottom: 30px; /* Adiciona um espaçamento abaixo do parágrafo */
+    margin-top: 20px; 
+    margin-bottom: 30px; 
 }
 
 .text {
@@ -25,7 +25,7 @@ p.center-text {
 }
 
 .Text h2 {
-    text-align: center; /* Centraliza o título dentro da classe Text */
+    text-align: center; 
 }
 
 img {

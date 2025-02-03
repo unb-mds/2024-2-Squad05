@@ -128,7 +128,7 @@ main {
     }
 }
 
-@media (max-width:1000px){
+@media (max-width:900px){
     .main {
         text-align: center;
         align-items: center;
@@ -151,17 +151,3 @@ main {
         height: 90px;
     }
 }
-
-/* @media (max-width:1300px) {
-    .selection-buttons{
-        width: 80%;
-    }
-
-} */
-
-/* @media (max-width:1300px) {
-    .button {
-        width: 465px;
-        height: 152px;
-    }
-} */
