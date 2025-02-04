@@ -27,6 +27,23 @@ services:
     ports:
       - "5432:5432"
 
+  # Streamlit Dashboard
+  streamlit:
+    container_name: lumina-streamlit
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: streamlit run src/dashboard/app.py --server.port=8501 --server.address=0.0.0.0
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    environment:
+      - DEBUG=True
+    depends_on:
+      - db
+
+
 volumes:
   lumina_db_data:
 

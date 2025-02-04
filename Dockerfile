@@ -17,4 +17,4 @@ COPY front/ ./
 COPY src/ ./
 
 # Expor a porta padrão do Django
-EXPOSE 8000
+EXPOSE 8000 8501
