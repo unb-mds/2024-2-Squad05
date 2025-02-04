@@ -1,10 +1,10 @@
 from openai import OpenAI
 from pydantic import BaseModel
+import os
 
 
 class Sentiment(BaseModel):
-    comment: str
-    sentiment: str
+    sentiment: int
 
 
 class Prompts:
@@ -74,17 +74,41 @@ The output should be in JSON format specifying the identified sentiment category
 - Consider linguistic nuances and colloquialisms specific to Brazilian Portuguese.
 - Pay attention to context clues that might indicate sarcasm or irony, which can affect the perceived sentiment."""
 
+    sentiment_analysis_v2 = """Perform sentiment analysis on comments from a government proposal website. The comments should be categorized with a number from 0 to 4, where 0 represents a very negative comment, 2 represents a neutral comment, and 4 represents a very positive comment.
+
+# Steps
+
+1. **Read the Comment**: Carefully read and understand the comment to capture its essence.
+2. **Identify Sentiment Indicators**: Look for words and phrases that indicate positive, negative, or neutral sentiment.
+3. **Determine Sentiment Level**: Assess the overall sentiment of the comment based on identified indicators and context, paying attention to sarcasm or irony, and classify it on a scale from 0 to 4.
+4. **JSON Output**: Construct a JSON formatted response with the resulting sentiment score.
+
+# Output Format
+
+The output should be formatted as a JSON object with a single field:
+```json
+{
+  "sentiment": [0-4]
+}
+```"""
+
 
 def get_response(message, sys_prompt):
     client = OpenAI(
-        api_key="COLOCAR CHAVE AQUI!!")
+        api_key=os.getenv("ACTIONS_API_KEY"))
+
     completion = client.beta.chat.completions.parse(
-        model="gpt-4o-2024-08-06",
+        model="gpt-4o-mini",
         messages=[
             {"role": "system", "content": sys_prompt},
             {"role": "user", "content": message},
         ],
         response_format=Sentiment,
+        temperature=0.5,
+        max_completion_tokens=35,
+        top_p=1,
+        frequency_penalty=0,
+        presence_penalty=0
     )
     return completion.choices[0].message.parsed
 
@@ -95,7 +119,7 @@ def str_response(sentiment: int):
 
 
 def analyze_sentiment(text: str) -> int:
-    result = get_response(text, Prompts.sentiment_analysis_v1)
+    result = get_response(text, Prompts.sentiment_analysis_v2)
     try:
         sentiment_value = int(result.sentiment)
         if 0 <= sentiment_value <= 4:
