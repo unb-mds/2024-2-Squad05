@@ -1,10 +1,8 @@
+from datetime import datetime
 from openai import OpenAI
 from pydantic import BaseModel
+from src.comentario.models import Comentario
 import os
-
-
-class Sentiment(BaseModel):
-    sentiment: int
 
 
 class Prompts:
@@ -93,6 +91,10 @@ The output should be formatted as a JSON object with a single field:
 ```"""
 
 
+class Sentiment(BaseModel):
+    sentiment: int
+
+
 def get_response(message, sys_prompt):
     client = OpenAI(
         api_key=os.getenv("ACTIONS_API_KEY"))
@@ -128,3 +130,18 @@ def analyze_sentiment(text: str) -> int:
             raise ValueError
     except ValueError:
         return -1
+
+
+def update_db(since: datetime | None = None, max_comments: int | None = 500):
+    now = datetime.now()
+    comment_list = Comentario.objects.filter(sentiment=-1, updated_at__gt=since)
+    comment_list = comment_list.order_by('updated_at')[:max_comments]
+    for comment in comment_list:
+        sentiment = analyze_sentiment(comment.body)
+        comment.sentiment = sentiment
+        comment.analyzed_at = now
+        comment.save()
+
+
+def update_db_batch():
+    pass
