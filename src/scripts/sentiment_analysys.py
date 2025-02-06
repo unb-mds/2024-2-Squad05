@@ -1,7 +1,10 @@
-from datetime import datetime
+import json
+from datetime import datetime, date
+from django.db.models import QuerySet
 from openai import OpenAI
 from pydantic import BaseModel
 from src.comentario.models import Comentario
+from time import sleep
 import os
 
 
@@ -97,7 +100,7 @@ class Sentiment(BaseModel):
 
 def get_response(message, sys_prompt):
     client = OpenAI(
-        api_key=os.getenv("ACTIONS_API_KEY"))
+        api_key=os.getenv("LUMINA_OPENAI_API_KEY"))
 
     completion = client.beta.chat.completions.parse(
         model="gpt-4o-mini",
@@ -106,7 +109,7 @@ def get_response(message, sys_prompt):
             {"role": "user", "content": message},
         ],
         response_format=Sentiment,
-        temperature=0.5,
+        temperature=0.1,
         max_completion_tokens=35,
         top_p=1,
         frequency_penalty=0,
@@ -132,16 +135,133 @@ def analyze_sentiment(text: str) -> int:
         return -1
 
 
-def update_db(since: datetime | None = None, max_comments: int | None = 500):
+def get_comments(since: datetime | None = None, max_comments: int = 500) -> QuerySet[Comentario]:
+    if since is None:
+        comment_list = Comentario.objects.filter(sentiment=-1)
+    else:
+        comment_list = Comentario.objects.filter(sentiment=-1, updated_at__gt=since)
+
+    comment_list: QuerySet[Comentario] = comment_list.order_by('updated_at')[:max_comments]
+    return comment_list
+
+
+def get_tasks_file(comment_list: QuerySet[Comentario]) -> str:
+    tasks = []
     now = datetime.now()
-    comment_list = Comentario.objects.filter(sentiment=-1, updated_at__gt=since)
-    comment_list = comment_list.order_by('updated_at')[:max_comments]
+
+    # Create task list
+    for comment in comment_list:
+        task = {
+            "custom_id": comment.id,
+            "method": "POST",
+            "url": "/v1/chat/completions",
+            "body": {
+                # This is what you would have in your Chat Completions API call
+                "model": "gpt-4o-mini",
+                "temperature": 0.1,
+                "response_format": {
+                    "type": "json_object"
+                },
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": Prompts.sentiment_analysis_v2
+                    },
+                    {
+                        "role": "user",
+                        "content": comment.body
+                    }
+                ],
+            }
+        }
+        tasks.append(task)
+
+    file_name = f"batch/source/batch_{now.date().isoformat()}_{datetime.time(now)}.jsonl"
+
+    # Create file and write lines
+    with open(file_name, 'w') as file:
+        for obj in tasks:
+            file.write(json.dumps(obj) + '\n')
+
+    return file_name
+
+
+def save_to_db(results: list[dict], start_time: datetime):
+    for result in results:
+        comment = Comentario.objects.get(id=result["custom_id"])
+        comment.sentiment = result["sentiment"]
+        comment.analyzed_at = start_time
+        comment.save()
+
+
+def serial_analysis(since: datetime | None = None, max_comments: int = 500, delay: int | float = 0):
+    now = datetime.now()
+    comment_list = get_comments(since, max_comments)
     for comment in comment_list:
         sentiment = analyze_sentiment(comment.body)
         comment.sentiment = sentiment
         comment.analyzed_at = now
         comment.save()
+        sleep(delay)
 
 
-def update_db_batch():
-    pass
+# TODO: Finish implementing batch processing
+def batch_analysis(since: datetime | None = None, max_comments: int = 500):
+    # Initialize OpenAI client and variables
+    client = OpenAI(api_key=os.getenv("LUMINA_OPENAI_API_KEY"))
+    comment_list = get_comments(since, max_comments)
+    file_name = get_tasks_file(comment_list)
+    start_time = datetime.now()
+
+    # Upload file to OpenAI
+    batch_file = client.files.create(
+        file=open(file_name, "rb"),
+        purpose="batch"
+    )
+
+    # Create batch job
+    batch_job = client.batches.create(
+        input_file_id=batch_file.id,
+        endpoint="/v1/chat/completions",
+        completion_window="24h"
+    )
+
+    # Retrieve batch object
+    batch_job = client.batches.retrieve(batch_job.id)
+
+    # Wait for batch job to complete
+    while True:
+        status = batch_job.status
+
+        match status:
+            case "validating" | "finalizing" | "cancelling":
+                sleep(15)
+            case "in_progress":
+                sleep(40)
+            case "completed":
+                break
+            case "failed":
+                pass
+            case "expired" | "cancelled":
+                pass
+
+    # Retrieve result file
+    result_file_id = batch_job.output_file_id
+    result = client.files.content(result_file_id).content
+
+    result_file_name = "batch/result/" + file_name.split("/")[2].replace(".jsonl", "_result.jsonl")
+
+    # Save result file
+    with open(result_file_name, 'wb') as file:
+        file.write(result)
+
+    # Parse result file as list of dicts
+    results = []
+    with open(result_file_name, 'r') as file:
+        for line in file:
+            # Parsing the JSON string into a dict and appending to the list of results
+            json_object = json.loads(line.strip())
+            results.append(json_object)
+
+    # Save results to database
+    save_to_db(results, start_time)
