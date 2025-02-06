@@ -95,8 +95,10 @@ Descrição do que será feito em cada Sprint:
 
 Tabela de Versionamento
 
-| Versão | Data       | Descrição                        | Autor(es)     |
-| ------ | ---------- | -------------------------------- | ------------- |
-| 1.0    | 28/11/2024 | Criação inicial                  | Gabriel Pinto |
-| 1.1    | 01/12/2024 | Atualização das Sprints 0, 1 e 2 | Gabriel Pinto |
-| 1.2    | 12/12/2024 | Atualização das Sprints 5, 6 e 7 | Luiz Henrique |
+| Versão | Data       | Descrição                         | Autor(es)     |
+| ------ | ---------- | --------------------------------  | ------------- |
+| 1.0    | 28/11/2024 | Criação inicial                   | Gabriel Pinto |
+| 1.1    | 01/12/2024 | Atualização das Sprints 0, 1 e 2  | Gabriel Pinto |
+| 1.2    | 12/12/2024 | Atualização das Sprints 5, 6 e 7  | Luiz Henrique |
+| 1.3    | 06/02/2025 | Atualização das Sprints 8, 9 e 10 | Arthur Fernandes|
+
