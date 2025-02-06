@@ -64,10 +64,24 @@ Descrição do que será feito em cada Sprint:
 - Criação da release notes
 
 #### Sprint 8
+- Preparar o estudo sobre o banco de dados 
+- Preparar um estudo sobre o gráfico do Streamlit
+- Criação do escopo da home
+- Colocar em funcionamento do Streamlit 
+- Definir as configurações do ambiente
 
 #### Sprint 9
+- Implementar o Streamlit com o Front-End
+- Integração do github actions 
+- Refatoramento da arquitetura
+- Desenvolvimento da página inicial
+- Criação da página de analise de sentimentos
 
 #### Sprint 10
+- Desenvolvimento da Página Recorrentes
+- Terminar o refatoramento da arquitetura
+- Arruma o github actions
+- Desenvolvimento da Analise de Sentimentos
 
 #### Sprint 11
 
