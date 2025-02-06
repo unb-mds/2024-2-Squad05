@@ -10,7 +10,6 @@ Nós, como membros, colaboradores e líderes do Projeto Lumina, nos comprometemo
 
 
 ## Nossos Padrões:
-Exemplos de comportamentos que contribuem para um ambiente positivo:
 
 * Demonstrar empatia e gentileza com os outros membros da equipe;
 * Respeitar a diversidade de opiniões e experiências, fomentando a troca construtiva de ideias;
@@ -18,7 +17,7 @@ Exemplos de comportamentos que contribuem para um ambiente positivo:
 * Assumir responsabilidade pelos erros e buscar aprender com eles;
 * Buscar sempre soluções que beneficiem o projeto e a comunidade.
   
-* Exemplos de comportamentos inaceitáveis:
+* Comportamentos inaceitáveis:
 
 * Uso de linguagem ofensiva ou discriminatória, tanto no ambiente de trabalho quanto em interações externas;
 * Trollagem, insultos ou ataques pessoais contra membros da equipe;
