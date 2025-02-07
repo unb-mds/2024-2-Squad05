@@ -205,7 +205,6 @@ def serial_analysis(since: datetime | None = None, max_comments: int = 500, dela
         sleep(delay)
 
 
-# TODO: Finish implementing batch processing
 def batch_analysis(since: datetime | None = None, max_comments: int = 500):
     # Initialize OpenAI client and variables
     client = OpenAI(api_key=os.getenv("LUMINA_OPENAI_API_KEY"))
