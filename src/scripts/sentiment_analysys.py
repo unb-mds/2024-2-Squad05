@@ -3,7 +3,7 @@ from datetime import datetime, date
 from django.db.models import QuerySet
 from openai import OpenAI
 from pydantic import BaseModel
-from src.comentario.models import Comentario
+from comentario.models import Comentario
 from time import sleep
 import os
 
