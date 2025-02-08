@@ -8,15 +8,16 @@
 }
 
 p {
-    margin-top: 20px;
     margin-bottom: 30px;
     text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
 }
 
 p.center-text {
     text-align: center;
-    margin-top: 20px; /* Adiciona um espaçamento acima do parágrafo */
-    margin-bottom: 30px; /* Adiciona um espaçamento abaixo do parágrafo */
+    margin-top: 20px; 
+    margin-bottom: 30px; 
 }
 
 .text {
@@ -26,13 +27,11 @@ p.center-text {
 }
 
 .Text h2 {
-    text-align: center; /* Centraliza o título dentro da classe Text */
+    text-align: center; 
 }
 
 img {
-    margin-top: 20px;
     display: block;
-    margin: 0 auto 40px; 
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
@@ -93,7 +92,6 @@ h2 {
     object-fit: contain; 
 }
 
-/* Responsividade para telas menores, MUITO IMPORTANTEEE */
 @media (max-width: 768px) {
     .partner-logos {
         flex-direction: column; 
@@ -105,11 +103,10 @@ h2 {
     }
 }
 
-/* Contêiner específico para "Participe das discussões" */
 .participate-container {
-    display: flex; /* Usando flexbox para dispor os elementos */
-    justify-content: space-between; /* Espaço entre a imagem e o texto */
-    align-items: center; /* Centraliza verticalmente */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
     margin-top: 20px;
     margin-bottom: 80px;
 }
@@ -117,15 +114,14 @@ h2 {
 .Text {
     flex: 1;
     margin-left: 20px;
-    text-align: left; /* Garantir que o texto fique alinhado à esquerda */
-   
+    text-align: left; 
 }
 
 .participate-container .Img {
     flex: 1;
-    text-align: left; /* Alinha a imagem à esquerda */
+    text-align: left; 
     display: flex;
-    justify-content: center; /* Centraliza a imagem verticalmente */
+    justify-content: center; /
 }
 
 .participate-container .Img img {
@@ -137,8 +133,7 @@ h2 {
 }
 
 .capa{
-    padding-top: 10px;
-    width: 100%; /* Ajuste do tamanho da imagem */
+    width: 100%; 
     height: 100%;
 }
 
@@ -147,51 +142,50 @@ h2 {
 }
 
 .partners-container {
-    background-color: #fe9a0d8e; /* Cor de fundo laranja */
-    color: #0653A1; /* Texto branco para contraste */
-    padding: 40px 20px; /* Espaçamento interno */
-    margin: 50px auto; /* Espaçamento externo e centraliza no eixo horizontal */
-    border-radius: 12px; /* Bordas arredondadas */
-    text-align: center; /* Centraliza o conteúdo */
-    max-width: 1200px; /* Limita a largura máxima do bloco */
+    background-color: #fe9a0d8e; 
+    color: #0653A1; 
+    padding: 40px 20px; 
+    margin: 50px auto;
+    border-radius: 12px; 
+    text-align: center; 
+    max-width: 1200px; 
 }
 
 .partners-container h1 {
-    font-size: 28px; /* Tamanho do título */
-    margin-bottom: 30px; /* Espaço abaixo do título */
-    color: #0653A1; /* Título branco */
+    font-size: 28px; 
+    margin-bottom: 30px; 
+    color: #0653A1; 
 }
 
 .partner-logos {
     display: flex;
-    justify-content: center; /* Centraliza as imagens no eixo horizontal */
-    gap: 30px; /* Espaçamento entre os logos */
-    flex-wrap: wrap; /* Permite que os logos quebrem linha em telas menores */
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
 }
 
 .partner-logos img {
-    width: 250px; /* Tamanho padrão dos logos */
-    height: 140px; /* Mantém proporção */
-    object-fit: contain; /* Garante que a imagem seja ajustada corretamente */
-    transition: transform 0.3s ease; /* Adiciona animação ao passar o mouse */
+    width: 250px; 
+    height: 140px;
+    object-fit: contain; 
+    transition: transform 0.3s ease; 
 }
 
 .partner-logos img:hover {
-    transform: scale(1.1); /* Aumenta ligeiramente no hover */
+    transform: scale(1.1); 
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .partner-logos img {
-        width: 100px; /* Reduz o tamanho dos logos */
+        width: 100px; 
     }
 
     .partners-container h1 {
-        font-size: 24px; /* Ajusta o tamanho do título */
+        font-size: 24px; 
     }
 
     .partner-logos {
-        gap: 20px; /* Reduz o espaço entre logos */
+        gap: 20px; 
     }
 }
 
