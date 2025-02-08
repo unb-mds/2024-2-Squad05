@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -21,6 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-+8zi0ob*2hm8c#rntx1e)r$o*q8=fy(@@xp%$3@gj@t#kx3(l&'
+
+# OpenAI API Key
+LUMINA_OPENAI_API_KEY = os.getenv('LUMINA_OPENAI_API_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -42,6 +46,7 @@ INSTALLED_APPS = [
     'proposta',
     'comentario',
     'view',
+    'scripts',
 ]
 
 MIDDLEWARE = [
@@ -116,9 +121,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'UTC-3'
 
 USE_I18N = True
 

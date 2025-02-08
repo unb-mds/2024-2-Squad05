@@ -2,7 +2,7 @@ services:
   # Web application
   web:
     container_name: lumina-web
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile.web
     ports:
@@ -11,6 +11,7 @@ services:
       - .:/app
     environment:
       - DEBUG= True
+      - LUMINA_OPENAI_API_KEY=your_openai_api_key
     depends_on:
       - db
 
