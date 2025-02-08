@@ -12,25 +12,35 @@ header{
 }
 
 .nav-bar{
-    height: 35px;
+    height: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Mantém os elementos separados */
+    align-items: center;
     padding: 1.5rem 6rem;
 }
 
-.logo h1{
-    color: white;
+.logo{
+    margin: 0px;
 }
 
 .nav-list{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%; /* Garante que a lista ocupe o espaço necessário */
+}
+
+.nav-list div {
+    flex-shrink: 0; /* Evita que a logo diminua */
 }
 
 .nav-list ul{
     display: flex;
-    justify-content: center;
-    list-style: none;
+    justify-content: flex-end; /* Move os itens para o final */
+    flex-grow: 1; /* Faz os itens ocuparem o espaço restante */
+    list-style: none; /* Remove as bolinhas */
+    padding: 0; /* Garante que não haja espaçamento extra */
+
 }
 
 .nav-item{
